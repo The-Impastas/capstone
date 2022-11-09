@@ -1,6 +1,6 @@
 pasta = [
   {
-    pasta: 'Angel Hair',
+    name_of_pasta: 'Angel Hair',
     protein: 'turkey',
     sauce: 'Pumpkin sauce',
     beverage: 'red sauvignon blanc',
@@ -10,28 +10,28 @@ pasta = [
     user_id: 1,
   },
   {
-    pasta: 'Angel Hair',
-    protein: 'turkey',
+    name_of_pasta: 'Angel Hair',
+    protein: 'tofu',
     sauce: 'Pumpkin sauce',
-    beverage: 'red sauvignon blanc',
-    cheese: 'parm',
+    beverage: 'michelob ultra',
+    cheese: 'american',
     recipe_link: 'google.com',
-    image: 'pasta.image.com' ,
-    user_id: 1,
+    image: 'pasta.image.2.com' ,
+    user_id: 2,
   },
   {
-    pasta: 'Angel Hair',
-    protein: 'turkey',
-    sauce: 'Pumpkin sauce',
-    beverage: 'red sauvignon blanc',
-    cheese: 'parm',
+    name_of_pasta: 'Angel Hair',
+    protein: 'beef',
+    sauce: 'red sauce',
+    beverage: 'chocolate milk',
+    cheese: 'asiago',
     recipe_link: 'google.com',
-    image: 'pasta.image.com' ,
-    user_id: 1,
+    image: 'pasta.image.3.com' ,
+    user_id: 3,
   }
 ]
 
-cats.each do |each_cat|
-  Cat.create each_cat
-  puts "creating cat #{each_cat}"
+pasta.each do |each_pasta|
+  Pasta.create each_pasta
+  puts "creating pasta #{each_pasta}"
 end

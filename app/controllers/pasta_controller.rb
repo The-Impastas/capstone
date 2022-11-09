@@ -1,0 +1,2 @@
+class PastaController < ApplicationController
+end

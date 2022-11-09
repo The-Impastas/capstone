@@ -1,0 +1,2 @@
+class Pastum < ApplicationRecord
+end
