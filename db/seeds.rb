@@ -7,7 +7,6 @@ pasta = [
     cheese: 'parm',
     recipe_link: 'google.com',
     image: 'pasta.image.com' ,
-    user_id: 1,
   },
   {
     name_of_pasta: 'Angel Hair',
@@ -16,8 +15,7 @@ pasta = [
     beverage: 'michelob ultra',
     cheese: 'american',
     recipe_link: 'google.com',
-    image: 'pasta.image.2.com' ,
-    user_id: 2,
+    image: 'pasta.image.2.com' 
   },
   {
     name_of_pasta: 'Angel Hair',
@@ -26,8 +24,7 @@ pasta = [
     beverage: 'chocolate milk',
     cheese: 'asiago',
     recipe_link: 'google.com',
-    image: 'pasta.image.3.com' ,
-    user_id: 3,
+    image: 'pasta.image.3.com',
   }
 ]
 
