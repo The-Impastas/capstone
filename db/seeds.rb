@@ -1,7 +1,36 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+user = User.where(email: "test@example.com").first_or_create(password: "password", password_confirmation: "password", first_name: "testing", last_name: "testing" , birthday: 04/04/1992 )
+
+pasta = [
+  {
+    name_of_pasta: 'Angel Hair',
+    protein: 'turkey',
+    sauce: 'Pumpkin sauce',
+    beverage: 'red sauvignon blanc',
+    cheese: 'parm',
+    recipe_link: 'google.com',
+    image: 'pasta.image.com' ,
+  },
+  {
+    name_of_pasta: 'Angel Hair',
+    protein: 'tofu',
+    sauce: 'Pumpkin sauce',
+    beverage: 'michelob ultra',
+    cheese: 'american',
+    recipe_link: 'google.com',
+    image: 'pasta.image.2.com' 
+  },
+  {
+    name_of_pasta: 'Angel Hair',
+    protein: 'beef',
+    sauce: 'red sauce',
+    beverage: 'chocolate milk',
+    cheese: 'asiago',
+    recipe_link: 'google.com',
+    image: 'pasta.image.3.com',
+  }
+]
+
+pasta.each do |each_pasta|
+  user.pastas.create each_pasta
+  puts "creating pasta #{each_pasta}"
+end

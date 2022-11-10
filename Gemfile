@@ -68,3 +68,5 @@ end
 gem "webpacker", "~> 5.4"
 
 gem "react-rails", "~> 2.6"
+
+gem "devise", "~> 4.8"
