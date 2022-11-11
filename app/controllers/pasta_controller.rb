@@ -1,8 +1,7 @@
 class PastaController < ApplicationController
 
-    def index
+        def index
         pastas = Pasta.all
-        render json: pasta
         end
         
         def create
