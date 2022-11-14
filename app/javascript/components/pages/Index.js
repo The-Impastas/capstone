@@ -5,39 +5,36 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { NavLink } from "react-router-dom"
 
 
 const Index = ({pastas}) => {
   console.log(pastas)
     return (
         <main>
-            {pastas.map((pasta, index) => {
+            {pastas?.map((pasta, index) => {
                 return (
                     <>
-                    export default function MediaCard() {
-
-                        <>
-                      return (
+                    
                         <Card sx={{ maxWidth: 345 }}>
                           <CardMedia
                             component="img"
                             height="140"
                             image= {pasta.image}
-                            alt= {pasta.name}
+                            alt= {pasta.name_of_pasta}
                           />
                           <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                              pasta.name
+                              {pasta.name_of_pasta}
                             </Typography>
                           </CardContent>
                           <CardActions>
-                            <Button size="small">{pasta.name}</Button>
+                            <NavLink to={`/show/${pasta.id}`}><Button size="small">{pasta.name_of_pasta}</Button></NavLink>
                           </CardActions>
                         </Card>
-                      );
-                      </>
-                      }
-                    
+          
+                    <br />
+                    <br />
                     </>
                 )
             })}

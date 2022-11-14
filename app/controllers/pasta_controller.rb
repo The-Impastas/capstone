@@ -13,6 +13,11 @@ class PastaController < ApplicationController
         end
         end
         
+        def show
+          pasta = Pasta.find(params[:id])
+
+        end
+
         def update
         pasta = Pasta.find(params[:id])
         pasta.update(pasta_params)
@@ -36,7 +41,7 @@ class PastaController < ApplicationController
         def pasta_params
         params.require(:pasta).permit(:name_of_pasta, :protein, :sauce, :beverage, :cheese, :recipe_link, :image, :user_id)
         end
-        end
+        
 
 
 end

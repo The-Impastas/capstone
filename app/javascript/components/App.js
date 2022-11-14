@@ -9,10 +9,21 @@ import Edit from './pages/Edit';
 import NotFound from './pages/NotFound';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { useState } from 'react';
+import MockData from "./MockData";
+
 
 
 const App = () => {
-  const [pastas, setPastas] = useState([])
+  const [pastas, setPastas] = useState(MockData)
+
+  const readPastas = () => {
+    fetch("/MockData")
+      .then((response) => response.json())
+      .then((payload) => {
+        setPastas(payload)
+      })
+      .catch((error) => console.log(error))
+  }
  
     return (
       <>
@@ -20,8 +31,8 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/index" element={<Index pastas={pastas} />} />
-        <Route path="/show" element={<Show />} />
+        <Route path="/index" element={<Index pastas={ pastas } />} />
+        <Route path="/show/:id" element={<Show pastas={ pastas }/>} />
         <Route path="/new" element={<New />} />
         <Route path="/edit" element={<Edit />} />
         <Route path="*" element={<NotFound />} />
