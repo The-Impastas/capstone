@@ -1,4 +1,4 @@
-user = User.where(email: "test@example.com").first_or_create(password: "password", password_confirmation: "password", first_name: "testing", last_name: "testing" , birthday: 04/04/1992 )
+user = User.where(email: "test@example.com").first_or_create(password: "password", password_confirmation: "password", first_name: "testing", last_name: "testing" , birthday: "1992-04-04")
 
 pasta = [
   {
