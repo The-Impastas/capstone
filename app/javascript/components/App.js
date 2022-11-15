@@ -37,6 +37,19 @@ const App = () => {
     .then((payload)=> readPastas(payload))
     .catch((errors) => console.log("Pasta create errors: ", errors))
   }
+
+  const updatePasta = (pasta, id) => {
+    fetch(`http://localhost:3000/${id}`, {
+      body: JSON.stringify(pasta, id),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "Patch"
+    })
+    .then(response => response.json())
+    .then((payload)=> readPastas(payload))
+    .catch((errors) => console.log("Pasta edit errors: ", errors))
+  }
  
     return (
       <>
@@ -47,7 +60,7 @@ const App = () => {
         <Route path="/index" element={<Index pastas={ pastas } />} />
         <Route path="/show/:id" element={<Show pastas={ pastas }/>} />
         <Route path="/new" element={<New createPasta={ createPasta } />} />
-        <Route path="/edit" element={<Edit />} />
+        <Route path = "/edit/:id" element = {<Edit pastas={ pastas } updatePasta={ updatePasta }/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
