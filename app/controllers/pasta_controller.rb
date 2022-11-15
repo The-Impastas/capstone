@@ -2,6 +2,7 @@ class PastaController < ApplicationController
 
   def index
     pastas = Pasta.all
+    render json: pastas
   end
   
   def create
@@ -15,7 +16,6 @@ class PastaController < ApplicationController
   
   def show
     pasta = Pasta.find(params[:id])
-
   end
 
   def update
