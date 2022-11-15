@@ -17,12 +17,25 @@ const App = () => {
   const [pastas, setPastas] = useState(MockData)
 
   const readPastas = () => {
-    fetch("/MockData")
+    fetch("/pastas")
       .then((response) => response.json())
       .then((payload) => {
         setPastas(payload)
       })
       .catch((error) => console.log(error))
+  }
+
+  const createPasta = (pasta) => {
+    fetch("http://localhost:3000/pastas", {
+      body: JSON.stringify(pasta),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+    .then(response => response.json())
+    .then((payload)=> readPastas(payload))
+    .catch((errors) => console.log("Pasta create errors: ", errors))
   }
  
     return (
@@ -33,7 +46,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/index" element={<Index pastas={ pastas } />} />
         <Route path="/show/:id" element={<Show pastas={ pastas }/>} />
-        <Route path="/new" element={<New />} />
+        <Route path="/new" element={<New createPasta={ createPasta } />} />
         <Route path="/edit" element={<Edit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
