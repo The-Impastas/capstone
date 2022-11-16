@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Link from "@mui/material/Link";
 
 const Home = () => {
 
@@ -85,6 +86,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
       mt: 10,
     }}>
       {/* Box starts the image button box */}
+    <Link href="/index">
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', justifyContent: 'center', top: 100}}>
       {images.map((image) => (
         <ImageButton
@@ -115,6 +117,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
         </ImageButton>
       ))}
     </Box>
+    </Link>
     </Container>
   );
 }
