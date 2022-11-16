@@ -171,70 +171,64 @@ RSpec.describe "Pastas", type: :request do
            expect(response).to have_http_status(422)
       end 
     end
+  
+# ------update-------
+  describe "PATCH /update" do
+    it "updates a pasta" do
+    # The params we are going to send with the request
+      pasta_params = {
+        pasta:{
+          name_of_pasta: 'Pangel Hair',
+          protein: 'turkey',
+          sauce: 'Pumpkin sauce',
+          beverage: 'red sauvignon blanc',
+          cheese: 'parm',
+          recipe_link: 'google.com',
+          image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
+          user_id: user.id
+        }
+      }
+    # Send the request to the server
+    p pasta_params
+    post "/pasta", params: pasta_params
+    pasta = Pasta.first
+      update_params = {
+          pasta:{
+            name_of_pasta: 'Angel Hair',
+            protein: 'turkey',
+            sauce: 'Pumpkin sauce',
+            beverage: 'red sauvignon blanc',
+            cheese: 'parm',
+            recipe_link: 'google.com',
+            image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
+            user_id: user.id
+          }
+      }
+    patch "/pasta/#{pasta.id}", params: update_params
+    pasta = Pasta.first
+    expect(response).to have_http_status(200)
+    expect(pasta.name_of_pasta).to eq 'Angel Hair'
+   end
   end
-  
-
-  
-
-
-
-# # ------update-------
-#   describe "PATCH /update" do
-#     it "updates a pasta" do
-#     # The params we are going to send with the request
-#       pasta_params = {
-#         pasta:{
-#           name_of_pasta: 'Pangel Hair',
-#           protein: 'turkey',
-#           sauce: 'Pumpkin sauce',
-#           beverage: 'red sauvignon blanc',
-#           cheese: 'parm',
-#           recipe_link: 'google.com',
-#           image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
-#           user_id: user.id
-#         }
-#       }
-#     # Send the request to the server
-#     p pasta_params
-#     post "/pasta", params: pasta_params
-#     pasta = Pasta.first
-#       update_params = {
-#           pasta:{
-#             name_of_pasta: 'Angel Hair',
-#             protein: 'turkey',
-#             sauce: 'Pumpkin sauce',
-#             beverage: 'red sauvignon blanc',
-#             cheese: 'parm',
-#             recipe_link: 'google.com',
-#             image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
-#             user_id: user.id
-#           }
-#       }
-#     patch "/pasta/#{pasta.id}", params: update_params
-#     pasta = Pasta.first
-#     expect(response).to have_http_status(200)
-#     expect(pasta.name_of_pasta).to eq 'Angel Hair'
-#    end
-#   end
-# # -----------delete------------
-#     describe 'DELETE /destroy' do
-#       it "deletes a pasta recipe" do
-#         pasta_params = {
-#           pasta: {
-#             name_of_pasta: 'Angel Hair',
-#             protein: 'turkey',
-#             sauce: 'Pumpkin sauce',
-#             beverage: 'red sauvignon blanc',
-#             cheese: 'parm',
-#             recipe_link: 'google.com',
-#             image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
-#             user_id: user.id
-#           }
-#         }
-#         post "/pasta", params: pasta_params
-#         pasta = Pasta.first
-#         delete "/pasta/#{pasta.id}"
-#         expect(response).to have_http_status(200)
-#       end
-#     end
-# end
+# -----------delete------------
+    describe 'DELETE /destroy' do
+      it "deletes a pasta recipe" do
+        pasta_params = {
+          pasta: {
+            name_of_pasta: 'Angel Hair',
+            protein: 'turkey',
+            sauce: 'Pumpkin sauce',
+            beverage: 'red sauvignon blanc',
+            cheese: 'parm',
+            recipe_link: 'google.com',
+            image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
+            user_id: user.id
+          }
+        }
+        post "/pasta", params: pasta_params
+        pasta = Pasta.first
+        delete "/pasta/#{pasta.id}"
+        expect(response).to have_http_status(200)
+      end
+    end
+end
