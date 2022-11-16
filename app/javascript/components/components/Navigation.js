@@ -22,8 +22,7 @@ const  Navigation = ({
   sign_out_route,
   new_user_route,
   })  => {
-    console.log("user:",current_user)
-    console.log("logged in:",logged_in)
+  
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
