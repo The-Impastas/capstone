@@ -27,7 +27,7 @@ const App = (props) => {
   }
 
   const createPasta = (pasta) => {
-    fetch("http://localhost:3000/pastas", {
+    fetch("http://localhost:3000/pasta", {
       body: JSON.stringify(pasta),
       headers: {
         "Content-Type": "application/json"
