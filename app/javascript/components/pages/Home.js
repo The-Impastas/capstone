@@ -5,6 +5,10 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from "@mui/material/Link";
+import CardContent from '@mui/material/CardContent';
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Unstable_Grid2';
 
 const Home = () => {
 
@@ -121,9 +125,68 @@ const ImageMarked = styled('span')(({ theme }) => ({
     </Box>
     
     {/* review section starts here */}
-    <Typography textAlign="center">
+    <Typography variant="h3" textAlign="center"
+    sx={{
+      mt: 10,
+      mb: 10,
+    }}>
           Reviews
     </Typography>
+      <Box>
+      <Grid container sx={{
+        justifyContent: 'center',
+        alignItems: 'center'
+        }}>
+        <Grid xs={4} md={5}>
+          <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
+            <CardContent>
+              <Typography variant="h5" component="div">
+                This pasta fuckin rocks!
+              </Typography>
+              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                - Nate
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid xs={4} md={5}>
+          <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
+            <CardContent>
+              <Typography variant="h5" component="div">
+                This pasta also fuckin rocks!
+              </Typography>
+              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                - Nate
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid xs={4} md={5}>
+          <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
+            <CardContent>
+              <Typography variant="h5" component="div">
+                This pasta fuckin rocks!
+              </Typography>
+              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                - Nate
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid xs={4} md={5}>
+          <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
+            <CardContent>
+              <Typography variant="h5" component="div">
+                This pasta also fuckin rocks!
+              </Typography>
+              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                - Nate
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+      </Box>
     </Container>
   );
 }
