@@ -61,9 +61,121 @@ RSpec.describe "Pastas", type: :request do
     expect(pasta["recipe_link"]).to eq 'google.com'
     expect(pasta["image"]).to eq 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg'
    end
+   #--------- Create w/o name -------------
+     it "doesn't create a pasta without a name" do
+       # The params we are going to send with the request
+         pasta_params = {
+           pasta:{
+             protein: 'turkey',
+             sauce: 'Pumpkin sauce',
+             beverage: 'red sauvignon blanc',
+             cheese: 'parm',
+             recipe_link: 'google.com',
+             image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
+             user_id: user.id
+           }
+         }
+         post '/pasta', params: pasta_params
+         error_response = JSON.parse(response.body)
+         expect(error_response["name_of_pasta"]).to include "can't be blank"
+         expect(response).to have_http_status(422)
+       end
+       it "doesn't create a pasta without a protein" do
+         # The params we are going to send with the request
+           pasta_params = {
+             pasta:{
+               name_of_pasta: 'Angel Hair',
+               sauce: 'Pumpkin sauce',
+               beverage: 'red sauvignon blanc',
+               cheese: 'parm',
+               recipe_link: 'google.com',
+               image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
+               user_id: user.id
+             }
+           }
+           post '/pasta', params: pasta_params
+           error_response = JSON.parse(response.body)
+           expect(error_response["protein"]).to include "can't be blank"
+           expect(response).to have_http_status(422)
+      end 
+       it "doesn't create a pasta without a beverage" do
+         # The params we are going to send with the request
+           pasta_params = {
+             pasta:{
+               name_of_pasta: 'Angel Hair',
+               protein: 'turkey',
+               sauce: 'Pumpkin sauce',
+               cheese: 'parm',
+               recipe_link: 'google.com',
+               image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
+               user_id: user.id
+             }
+           }
+           post '/pasta', params: pasta_params
+           error_response = JSON.parse(response.body)
+           expect(error_response["beverage"]).to include "can't be blank"
+           expect(response).to have_http_status(422)
+      end 
+       it "doesn't create a pasta without a cheese" do
+         # The params we are going to send with the request
+           pasta_params = {
+             pasta:{
+               name_of_pasta: 'Angel Hair',
+               protein: 'turkey',
+               sauce: 'Pumpkin sauce',
+               beverage: 'red sauvignon blanc',
+               recipe_link: 'google.com',
+               image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
+               user_id: user.id
+             }
+           }
+           post '/pasta', params: pasta_params
+           error_response = JSON.parse(response.body)
+           expect(error_response["cheese"]).to include "can't be blank"
+           expect(response).to have_http_status(422)
+      end 
+       it "doesn't create a pasta without a recipe link" do
+         # The params we are going to send with the request
+           pasta_params = {
+             pasta:{
+               name_of_pasta: 'Angel Hair',
+               protein: 'turkey',
+               sauce: 'Pumpkin sauce',
+               cheese: 'parm',
+               beverage: 'red sauvignon blanc',
+               image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg',
+               user_id: user.id
+             }
+           }
+           post '/pasta', params: pasta_params
+           error_response = JSON.parse(response.body)
+           expect(error_response["recipe_link"]).to include "can't be blank"
+           expect(response).to have_http_status(422)
+      end 
+       it "doesn't create a pasta without an image" do
+         # The params we are going to send with the request
+           pasta_params = {
+             pasta:{
+               name_of_pasta: 'Angel Hair',
+               protein: 'turkey',
+               sauce: 'Pumpkin sauce',
+               cheese: 'parm',
+               beverage: 'red sauvignon blanc',
+               recipe_link: 'google.com',
+               user_id: user.id
+             }
+           }
+           post '/pasta', params: pasta_params
+           error_response = JSON.parse(response.body)
+           expect(error_response["image"]).to include "can't be blank"
+           expect(response).to have_http_status(422)
+      end 
+    end
   end
- 
-  // 
+  
+
+  
+
 
 
 # # ------update-------
