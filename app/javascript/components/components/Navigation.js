@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -17,7 +17,13 @@ import Link from "@mui/material/Link";
 
 const  Navigation = ({
   logged_in,
+  current_user,
+  sign_in_route,
+  sign_out_route,
+  new_user_route,
   })  => {
+    console.log("user:",current_user)
+    console.log("logged in:",logged_in)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -89,6 +95,8 @@ const  Navigation = ({
     // search bar stuff end //
 
   return (
+    //desktop view start//
+    //logoIcon//
     <AppBar color="warning" position="fixed">
       <Container  maxWidth="xl">
         <Toolbar  disableGutters>
@@ -110,7 +118,7 @@ const  Navigation = ({
           >
             Pasta Pairings
           </Typography>
-
+​
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -140,13 +148,54 @@ const  Navigation = ({
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem  key={page} onClick={handleCloseNavMenu}>
-                  <Typography  textAlign="center">{page}</Typography>
+              {/* //nav links to always show// */}
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography  textAlign="center">
+                    <Link className="link" href="/index">
+                      Pastas
+                    </Link>
+                  </Typography>
                 </MenuItem>
-              ))}
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography  textAlign="center">
+                    <Link className="link" href="/aboutus">
+                      About Us
+                    </Link>
+                  </Typography>
+                </MenuItem>
+              {/* //nav links to show logged in// */}
+              {logged_in && (
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography  textAlign="center">
+                    <Link className="link" href={ sign_out_route }>
+                      Sign Out
+                    </Link>
+                  </Typography>
+                </MenuItem>
+              )}
+              {/* //nav links to show logged out// */}
+              {!logged_in && (
+                <>
+                <MenuItem   onClick={handleCloseNavMenu}>
+                <Typography  textAlign="center">
+                  <Link className="link" href={ sign_in_route }>
+                    Sign In
+                  </Link>
+                  </Typography>
+              </MenuItem>
+                <MenuItem   onClick={handleCloseNavMenu}>
+                <Typography  textAlign="center">                  
+                  <Link className="link" href={ new_user_route }>
+                    Sign Up
+                  </Link>
+                </Typography>
+              </MenuItem>
+              </>
+              )}
             </Menu>
           </Box>
+          {/* //mobile view start//
+              //logoIcon// */}
           <DinnerDiningIcon  sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
@@ -167,15 +216,50 @@ const  Navigation = ({
             PP
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          {/* //nav links to always show// */}
+          <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography  textAlign="center">
+                    <Link className="link" href="/index">
+                      Pastas
+                    </Link>
+                  </Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography  textAlign="center">
+                    <Link className="link" href="/aboutus">
+                      About Us
+                    </Link>
+                  </Typography>
+                </MenuItem>
+              {/* //nav links to show logged in// */}
+              {logged_in && (
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography  textAlign="center">
+                    <Link className="link" href={ sign_out_route }>
+                      Sign Out
+                    </Link>
+                  </Typography>
+                </MenuItem>
+              )}
+              {/* //nav links to show logged out// */}
+              {!logged_in && (
+                <>
+                <MenuItem   onClick={handleCloseNavMenu}>
+                <Typography  textAlign="center">
+                  <Link className="link" href={ sign_in_route }>
+                    Sign In
+                  </Link>
+                  </Typography>
+              </MenuItem>
+                <MenuItem   onClick={handleCloseNavMenu}>
+                <Typography  textAlign="center">                  
+                  <Link className="link" href={ new_user_route }>
+                    Sign Up
+                  </Link>
+                </Typography>
+              </MenuItem>
+              </>
+              )}
           </Box>
               <Search>
             <SearchIconWrapper>
