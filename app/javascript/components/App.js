@@ -13,7 +13,8 @@ import MockData from "./MockData";
 
 
 
-const App = () => {
+const App = (props) => {
+ 
   const [pastas, setPastas] = useState(MockData)
 
   const readPastas = () => {
@@ -53,7 +54,7 @@ const App = () => {
  
     return (
       <>
-    <Header />
+    <Header {...props}/>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
