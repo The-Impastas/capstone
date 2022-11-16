@@ -86,7 +86,6 @@ const ImageMarked = styled('span')(({ theme }) => ({
       mt: 10,
     }}>
       {/* Box starts the image button box */}
-    <Link href="/index">
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', justifyContent: 'center', top: 100}}>
       {images.map((image) => (
         <ImageButton
@@ -98,6 +97,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
+          <Link href="/index">
           <Image>
             <Typography
               component="span"
@@ -114,10 +114,16 @@ const ImageMarked = styled('span')(({ theme }) => ({
               <ImageMarked className="MuiImageMarked-root" />
             </Typography>
           </Image>
+          </Link>
         </ImageButton>
+
       ))}
     </Box>
-    </Link>
+    
+    {/* review section starts here */}
+    <Typography textAlign="center">
+          Reviews
+    </Typography>
     </Container>
   );
 }
