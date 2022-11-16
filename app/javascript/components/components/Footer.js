@@ -6,7 +6,6 @@ import { Typography } from '@mui/material';
 
 const Footer = () => {
 
-  const [value, setValue] = React.useState(0);
   const ref = React.useRef(null);
 
   return (
