@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import {useParams, NavLink} from "react-router-dom"
 
 
-const Show = ({pastas}) => {
+const Show = ({pastas, logged_in}) => {
   console.log("pasta", pastas)
   const { id } = useParams()
 
@@ -37,7 +37,7 @@ const Show = ({pastas}) => {
             Recipe: {showPasta.recipe_link}
           </Typography>
         </CardContent>
-        <NavLink to={`/edit/${showPasta.id}`}><button>Edit your perfect pasta</button></NavLink>
+        {logged_in && ( <NavLink to={`/edit/${showPasta.id}`}><button>Edit your perfect pasta</button></NavLink>)}
       </Card>
       <br />
       <br />

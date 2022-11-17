@@ -4,6 +4,8 @@ class PastaController < ApplicationController
     pastas = Pasta.all
     render json: pastas
   end
+
+  
   
   def create
     pasta = Pasta.create(pasta_params)

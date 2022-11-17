@@ -32,22 +32,6 @@ const  Navigation = ({
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-    const pages = [   
-      <Link className="link" href="/index">
-      Pastas
-      </Link>,
-      <Link className="link" href="/users/sign_in">
-      Sign In
-      </Link>,
-      <Link className="link" href="/users/sign_out">
-      Sign Out
-      </Link>,
-      <Link className="link" href="/users/sign_up">
-      Sign Up
-      </Link>,
-      <Link className="link" href="/aboutus">
-      About Us
-      </Link>, ];
 
     // search bar stuff //
     const Search = styled('div')(({ theme }) => ({
@@ -96,10 +80,10 @@ const  Navigation = ({
   return (
     //desktop view start//
     //logoIcon//
-    <AppBar color="warning" position="fixed">
+    <AppBar  position="fixed">
       <Container  maxWidth="xl">
         <Toolbar  disableGutters>
-          <DinnerDiningIcon  sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <DinnerDiningIcon  color='info' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -164,6 +148,14 @@ const  Navigation = ({
                 </MenuItem>
               {/* //nav links to show logged in// */}
               {logged_in && (
+                <>
+                <MenuItem   onClick={handleCloseNavMenu}>
+                <Typography  textAlign="center">
+                  <Link className="link" href="/protectedIndex">
+                    My Pastas
+                  </Link>
+                  </Typography>
+                </MenuItem>
                 <MenuItem  onClick={handleCloseNavMenu}>
                   <Typography  textAlign="center">
                     <Link className="link" href={ sign_out_route }>
@@ -171,6 +163,7 @@ const  Navigation = ({
                     </Link>
                   </Typography>
                 </MenuItem>
+                </>
               )}
               {/* //nav links to show logged out// */}
               {!logged_in && (
@@ -195,7 +188,7 @@ const  Navigation = ({
           </Box>
           {/* //mobile view start//
               //logoIcon// */}
-          <DinnerDiningIcon  sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <DinnerDiningIcon  color='info' sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -232,6 +225,14 @@ const  Navigation = ({
                 </MenuItem>
               {/* //nav links to show logged in// */}
               {logged_in && (
+                <>
+                <MenuItem   onClick={handleCloseNavMenu}>
+                <Typography  textAlign="center">
+                  <Link className="link" href="/protectedIndex">
+                    My Pastas
+                  </Link>
+                  </Typography>
+                </MenuItem>
                 <MenuItem  onClick={handleCloseNavMenu}>
                   <Typography  textAlign="center">
                     <Link className="link" href={ sign_out_route }>
@@ -239,6 +240,7 @@ const  Navigation = ({
                     </Link>
                   </Typography>
                 </MenuItem>
+                </>
               )}
               {/* //nav links to show logged out// */}
               {!logged_in && (
