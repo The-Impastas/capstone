@@ -12,6 +12,11 @@ import { useState } from 'react';
 import MockData from "./MockData";
 import AboutUs from "./pages/AboutUs";
 import ProtectedIndex from "./pages/ProtectedIndex";
+import { createTheme, ThemeProvider } from "@mui/material";
+import "./App.css" 
+
+
+
 const App = (props) => {
  
   const [pastas, setPastas] = useState(MockData)
@@ -47,9 +52,35 @@ const App = (props) => {
     .then((payload)=> readPastas(payload))
     .catch((errors) => console.log("Pasta edit errors: ", errors))
   }
- 
+  // adding theme for website// 
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#F95738',
+      },
+      secondary: {
+        main: '#EE964B',
+      },
+      background: {
+        default: '#f2f2e7',
+        paper: '#F95738',
+        card: '#F95738',
+      },
+      text: {
+        primary: '#083D77',
+        secondary: '#083D77',
+        disabled: '#083D77',
+        hint: '#083D77',
+      },
+      info: {
+        main: '#083D77',
+      }
+    },
+  });
+  
+
     return (
-      <>
+      <ThemeProvider theme={theme}>
     <Header {...props}/>
     <BrowserRouter>
       <Routes>
@@ -64,7 +95,7 @@ const App = (props) => {
       </Routes>
     </BrowserRouter>
     <Footer />
-  </>
+  </ThemeProvider>
     );
   }
 export default App

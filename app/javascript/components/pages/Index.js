@@ -6,39 +6,51 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { NavLink } from "react-router-dom"
-
+import Link from '@mui/material'
+import {Container, Grid} from '@mui/material'
 
 const Index = ({pastas}) => {
   console.log(pastas)
     return (
-        <main>
+      <Container
+      sx={{
+        mt: 10,
+      }}>
+        <Typography variant="h3" textAlign="center"
+        sx={{
+          mt: 10,
+          mb: 10,
+        }}>
+        All Our Pasta Pairings
+      </Typography>
             {pastas?.map((pasta, index) => {
                 return (
-                    <>
+                  <Grid container columnSpacing={2} sx={{
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                  }}
+                  >
                     
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ m: 5, minWidth: 200, maxWidth: 300, alignItems: 'center' }}>
                           <CardMedia
                             component="img"
-                            height="140"
+                            height="240"
                             image= {pasta.image}
                             alt= {pasta.name_of_pasta}
                           />
                           <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                              {pasta.name_of_pasta}
+                            <Typography align="center" variant="h5" component="div">
+                              <NavLink to={`/show/${pasta.id}`}>{pasta.name_of_pasta}</NavLink>
                             </Typography>
                           </CardContent>
-                          <CardActions>
-                            <NavLink to={`/show/${pasta.id}`}><Button size="small">{pasta.name_of_pasta}</Button></NavLink>
-                          </CardActions>
                         </Card>
           
                     <br />
                     <br />
-                    </>
+                    </Grid>
                 )
             })}
-        </main>
+        </Container>
 
     )
 
