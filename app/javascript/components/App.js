@@ -72,9 +72,8 @@ const App = (props) => {
         disabled: '#083D77',
         hint: '#083D77',
       },
-      Info: {
-        primary: '#083D77',
-        active: '#083D77',
+      info: {
+        main: '#083D77',
       }
     },
   });

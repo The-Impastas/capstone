@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { NavLink } from "react-router-dom"
 import Link from '@mui/material'
-import {Container} from '@mui/material'
+import {Container, Grid} from '@mui/material'
 
 const Index = ({pastas}) => {
   console.log(pastas)
@@ -16,14 +16,25 @@ const Index = ({pastas}) => {
       sx={{
         mt: 10,
       }}>
+        <Typography variant="h3" textAlign="center"
+        sx={{
+          mt: 10,
+          mb: 10,
+        }}>
+        All Our Pasta Pairings
+      </Typography>
             {pastas?.map((pasta, index) => {
                 return (
-                    <>
+                  <Grid container columnSpacing={2} sx={{
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                  }}
+                  >
                     
-                        <Card x={{ display: 'flex', flexWrap: 'wrap', minWidth: 50, width: '50%', justifyContent: 'center', top: 100}}>
+                        <Card sx={{ m: 5, minWidth: 200, maxWidth: 300, alignItems: 'center' }}>
                           <CardMedia
                             component="img"
-                            height="140"
+                            height="240"
                             image= {pasta.image}
                             alt= {pasta.name_of_pasta}
                           />
@@ -36,7 +47,7 @@ const Index = ({pastas}) => {
           
                     <br />
                     <br />
-                    </>
+                    </Grid>
                 )
             })}
         </Container>
