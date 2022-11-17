@@ -32,22 +32,6 @@ const  Navigation = ({
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-    const pages = [   
-      <Link className="link" href="/index">
-      Pastas
-      </Link>,
-      <Link className="link" href="/users/sign_in">
-      Sign In
-      </Link>,
-      <Link className="link" href="/users/sign_out">
-      Sign Out
-      </Link>,
-      <Link className="link" href="/users/sign_up">
-      Sign Up
-      </Link>,
-      <Link className="link" href="/aboutus">
-      About Us
-      </Link>, ];
 
     // search bar stuff //
     const Search = styled('div')(({ theme }) => ({
@@ -96,7 +80,7 @@ const  Navigation = ({
   return (
     //desktop view start//
     //logoIcon//
-    <AppBar color="warning" position="fixed">
+    <AppBar  position="fixed">
       <Container  maxWidth="xl">
         <Toolbar  disableGutters>
           <DinnerDiningIcon  sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
