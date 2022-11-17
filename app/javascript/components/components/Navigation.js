@@ -164,6 +164,14 @@ const  Navigation = ({
                 </MenuItem>
               {/* //nav links to show logged in// */}
               {logged_in && (
+                <>
+                <MenuItem   onClick={handleCloseNavMenu}>
+                <Typography  textAlign="center">
+                  <Link className="link" href="/protectedIndex">
+                    My Pastas
+                  </Link>
+                  </Typography>
+                </MenuItem>
                 <MenuItem  onClick={handleCloseNavMenu}>
                   <Typography  textAlign="center">
                     <Link className="link" href={ sign_out_route }>
@@ -171,6 +179,7 @@ const  Navigation = ({
                     </Link>
                   </Typography>
                 </MenuItem>
+                </>
               )}
               {/* //nav links to show logged out// */}
               {!logged_in && (
@@ -232,6 +241,14 @@ const  Navigation = ({
                 </MenuItem>
               {/* //nav links to show logged in// */}
               {logged_in && (
+                <>
+                <MenuItem   onClick={handleCloseNavMenu}>
+                <Typography  textAlign="center">
+                  <Link className="link" href="/protectedIndex">
+                    My Pastas
+                  </Link>
+                  </Typography>
+                </MenuItem>
                 <MenuItem  onClick={handleCloseNavMenu}>
                   <Typography  textAlign="center">
                     <Link className="link" href={ sign_out_route }>
@@ -239,6 +256,7 @@ const  Navigation = ({
                     </Link>
                   </Typography>
                 </MenuItem>
+                </>
               )}
               {/* //nav links to show logged out// */}
               {!logged_in && (
