@@ -15,10 +15,10 @@ import MockData from "./MockData";
 
 const App = (props) => {
  
-  const [pastas, setPastas] = useState(MockData)
+  const [pastas, setPastas] = useState([])
 
   const readPastas = () => {
-    fetch("/pastas")
+    fetch("/pasta")
       .then((response) => response.json())
       .then((payload) => {
         setPastas(payload)
@@ -26,9 +26,9 @@ const App = (props) => {
       .catch((error) => console.log(error))
   }
 
-  const createPasta = (pasta) => {
+  const createPasta = (newPasta) => {
     fetch("http://localhost:3000/pasta", {
-      body: JSON.stringify(pasta),
+      body: JSON.stringify(newPasta),
       headers: {
         "Content-Type": "application/json"
       },

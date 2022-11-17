@@ -12,10 +12,10 @@ const Index = ({pastas}) => {
   console.log(pastas)
     return (
         <main>
+          <div>
             {pastas?.map((pasta, index) => {
                 return (
-                    <>
-                    
+                    <>                   
                         <Card sx={{ maxWidth: 345 }}>
                           <CardMedia
                             component="img"
@@ -32,12 +32,14 @@ const Index = ({pastas}) => {
                             <NavLink to={`/show/${pasta.id}`}><Button size="small">{pasta.name_of_pasta}</Button></NavLink>
                           </CardActions>
                         </Card>
-          
                     <br />
                     <br />
                     </>
                 )
-            })}
+              })}  
+              </div>
+              <div><NavLink to={`/new`}><Button>Create your own dish</Button></NavLink>    
+              </div>    
         </main>
 
     )
