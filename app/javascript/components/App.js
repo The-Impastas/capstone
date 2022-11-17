@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { useState } from 'react';
 import MockData from "./MockData";
+import AboutUs from "./pages/AboutUs";
 
 
 
@@ -62,6 +63,7 @@ const App = (props) => {
         <Route path="/show/:id" element={<Show pastas={ pastas }/>} />
         <Route path="/new" element={<New createPasta={ createPasta } />} />
         <Route path = "/edit/:id" element = {<Edit pastas={ pastas } updatePasta={ updatePasta }/>} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
