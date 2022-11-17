@@ -44,14 +44,12 @@ const Index = ({pastas}) => {
                             </Typography>
                           </CardContent>
                         </Card>
-          
                     <br />
                     <br />
                     </Grid>
                 )
             })}
         </Container>
-
     )
 
 }

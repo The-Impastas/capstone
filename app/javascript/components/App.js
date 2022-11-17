@@ -19,18 +19,19 @@ import "./App.css"
 
 const App = (props) => {
  
-  const [pastas, setPastas] = useState(MockData)
+  const [pastas, setPastas] = useState([])
   const readPastas = () => {
-    fetch("/pastas")
+    fetch("/pasta")
       .then((response) => response.json())
       .then((payload) => {
         setPastas(payload)
       })
       .catch((error) => console.log(error))
   }
-  const createPasta = (pasta) => {
+
+  const createPasta = (newPasta) => {
     fetch("http://localhost:3000/pasta", {
-      body: JSON.stringify(pasta),
+      body: JSON.stringify(newPasta),
       headers: {
         "Content-Type": "application/json"
       },
@@ -40,8 +41,9 @@ const App = (props) => {
     .then((payload)=> readPastas(payload))
     .catch((errors) => console.log("Pasta create errors: ", errors))
   }
+
   const updatePasta = (pasta, id) => {
-    fetch(`http://localhost:3000/${id}`, {
+    fetch(`http://localhost:3000/pasta/${id}`, {
       body: JSON.stringify(pasta, id),
       headers: {
         "Content-Type": "application/json"
@@ -86,9 +88,9 @@ const App = (props) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/index" element={<Index pastas={ pastas } />} />
+        <Route path="/new" element={<New createPasta={ createPasta } {...props}/>} />
         <Route path="/protectedindex" element={<ProtectedIndex pastas={ pastas } {...props}/>} />
         <Route  path="/show/:id" element={<Show pastas={ pastas } {...props}/>} />
-        <Route path="/new" element={<New createPasta={ createPasta } />} />
         <Route path = "/edit/:id" element = {<Edit pastas={ pastas } updatePasta={ updatePasta }/>} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />

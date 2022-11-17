@@ -41,9 +41,7 @@ class PastaController < ApplicationController
   
   private
   def pasta_params
-    params.require(:pasta).permit(:name_of_pasta, :protein, :sauce, :beverage, :cheese, :recipe_link, :image, :user_id)
+    params.require(:pastum).permit(:name_of_pasta, :protein, :sauce, :beverage, :cheese, :recipe_link, :image, :user_id)
   end
         
-
-
 end
