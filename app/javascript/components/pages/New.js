@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { TextField, Input, Button, InputLabel, Paper } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const New = ({ createPasta }) => {
-
+const New = ({ createPasta, current_user }) => {
   const navigate = useNavigate()
   const [newPasta, setNewPasta] = useState({
     name_of_pasta: "",
@@ -12,7 +11,8 @@ const New = ({ createPasta }) => {
     beverage: "",
     cheese: "",
     recipe_link: "",
-    image: ""
+    image: "",
+    user_id: current_user.id
   })
   const handleChange = (e) => {
     setNewPasta({ ...newPasta, [e.target.name]: e.target.value })

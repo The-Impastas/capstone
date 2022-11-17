@@ -38,9 +38,9 @@ const App = (props) => {
     .then((payload)=> readPastas(payload))
     .catch((errors) => console.log("Pasta create errors: ", errors))
   }
-
+// fetch url is not correct for update!!!!!!!!!
   const updatePasta = (pasta, id) => {
-    fetch(`http://localhost:3000/${id}`, {
+    fetch(`http://localhost:3000/pasta/${id}`, {
       body: JSON.stringify(pasta, id),
       headers: {
         "Content-Type": "application/json"
@@ -60,7 +60,7 @@ const App = (props) => {
         <Route path="/" element={<Home />} />
         <Route path="/index" element={<Index pastas={ pastas } />} />
         <Route path="/show/:id" element={<Show pastas={ pastas }/>} />
-        <Route path="/new" element={<New createPasta={ createPasta } />} />
+        <Route path="/new" element={<New createPasta={ createPasta } {...props}/>} />
         <Route path = "/edit/:id" element = {<Edit pastas={ pastas } updatePasta={ updatePasta }/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
