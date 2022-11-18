@@ -65,7 +65,7 @@ const App = (props) => {
       },
       background: {
         default: '#f2f2e7',
-        paper: '#F95738',
+        paper: '#ECECDC',
         card: '#F95738',
       },
       text: {
