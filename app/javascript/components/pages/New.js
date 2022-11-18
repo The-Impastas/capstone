@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Input, Button, InputLabel, Paper } from "@mui/material";
+import { TextField, Input, Button, InputLabel, Paper, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const New = ({ createPasta, current_user }) => {
@@ -23,11 +23,22 @@ const New = ({ createPasta, current_user }) => {
   }
 
   return (
-
-    <Paper>
+    <Grid container columnSpacing={2} sx={{
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}
+    >
+    <Paper sx={{
+      m: 5,
+      p: 2,
+      justifyContent: 'center',
+      alignItems: 'center'}}>
       <h1>Fill in the form to Create your pasta!</h1>
       <br />
       <TextField 
+      sx={{
+      justifyContent: 'center',
+      alignItems: 'center'}}
       required id="outlined-required" 
       label="Name of Pasta" 
       name="name_of_pasta" 
@@ -95,6 +106,7 @@ const New = ({ createPasta, current_user }) => {
         Submit Pasta
       </Button>
     </Paper>
+    </Grid>
   )
 }
 

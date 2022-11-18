@@ -8,7 +8,7 @@ pasta = [
     beverage: 'red sauvignon blanc',
     cheese: 'parm',
     recipe_link: 'google.com',
-    image: 'pasta.image.com' ,
+    image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Angel-Hair-with-Pesto_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814629222.jpeg' ,
   },
   {
     name_of_pasta: 'Angel Hair',
@@ -17,7 +17,7 @@ pasta = [
     beverage: 'michelob ultra',
     cheese: 'american',
     recipe_link: 'google.com',
-    image: 'pasta.image.2.com' 
+    image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2021/06/fettuccine-alfredo-1-500x375.jpg' 
   },
   {
     name_of_pasta: 'Angel Hair',
@@ -26,7 +26,7 @@ pasta = [
     beverage: 'chocolate milk',
     cheese: 'asiago',
     recipe_link: 'google.com',
-    image: 'pasta.image.3.com',
+    image: 'https://www.savingdessert.com/wp-content/uploads/2017/06/Potato-Gnocchi-7-800x533.jpg',
   }
 ]
 

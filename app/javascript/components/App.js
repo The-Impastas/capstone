@@ -8,8 +8,7 @@ import New from './pages/New';
 import Edit from './pages/Edit';
 import NotFound from './pages/NotFound';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { useState } from 'react';
-import MockData from "./MockData";
+import { useState, useEffect } from 'react';
 import AboutUs from "./pages/AboutUs";
 import ProtectedIndex from "./pages/ProtectedIndex";
 import { createTheme, ThemeProvider } from "@mui/material";
@@ -17,11 +16,17 @@ import "./App.css"
 
 
 
+
 const App = (props) => {
  
   const [pastas, setPastas] = useState([])
+
+  useEffect(() => {
+    readPastas()
+  }, [])
+
   const readPastas = () => {
-    fetch("/pasta")
+    fetch("http://localhost:3000/pasta")
       .then((response) => response.json())
       .then((payload) => {
         setPastas(payload)
@@ -65,7 +70,7 @@ const App = (props) => {
       },
       background: {
         default: '#f2f2e7',
-        paper: '#F95738',
+        paper: '#ECECDC',
         card: '#F95738',
       },
       text: {
