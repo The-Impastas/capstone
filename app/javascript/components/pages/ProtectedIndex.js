@@ -5,9 +5,6 @@ import { NavLink } from "react-router-dom";
 
 const ProtectedIndex = ({ pastas, current_user}) => {
   const currentUserPasta = pastas?.filter(item => item.user_id === current_user.id)
-  
-    console.log(currentUserPasta)
-
     return (
 
       <Container

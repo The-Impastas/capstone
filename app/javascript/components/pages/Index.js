@@ -10,7 +10,6 @@ import Link from '@mui/material'
 import {Container, Grid} from '@mui/material'
 
 const Index = ({pastas}) => {
-  console.log(pastas)
     return (
       <Container
       sx={{
