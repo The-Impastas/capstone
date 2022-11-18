@@ -4,8 +4,6 @@ class PastaController < ApplicationController
     pastas = Pasta.all
     render json: pastas
   end
-
-  
   
   def create
     pasta = Pasta.create(pasta_params)
@@ -44,4 +42,6 @@ class PastaController < ApplicationController
     params.require(:pastum).permit(:name_of_pasta, :protein, :sauce, :beverage, :cheese, :recipe_link, :image, :user_id)
   end
         
+
+
 end
