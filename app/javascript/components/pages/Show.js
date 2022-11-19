@@ -9,7 +9,6 @@ import {useParams, NavLink} from "react-router-dom"
 
 
 const Show = ({pastas, logged_in}) => {
-  console.log("pasta", pastas)
   const { id } = useParams()
 
   let showPasta = pastas?.find((pasta) => pasta.id === +id)

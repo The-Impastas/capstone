@@ -16,7 +16,6 @@ import "./App.css"
 
 
 
-
 const App = (props) => {
  
   const [pastas, setPastas] = useState([])
@@ -53,12 +52,27 @@ const App = (props) => {
       headers: {
         "Content-Type": "application/json"
       },
-      method: "Patch"
+      method: "PATCH"
     })
     .then(response => response.json())
     .then((payload)=> readPastas(payload))
     .catch((errors) => console.log("Pasta edit errors: ", errors))
   }
+
+  const deletePasta = (pasta, id) => {
+    fetch(`http://localhost:3000/pasta/${id}`, {
+      body: JSON.stringify(pasta, id),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then(response => response.json())
+    .then((payload)=> readPastas(payload))
+    .catch((errors) => console.log("Pasta delete errors: ", errors))
+  }
+
+
   // adding theme for website// 
   const theme = createTheme({
     palette: {
@@ -95,8 +109,8 @@ const App = (props) => {
         <Route path="/index" element={<Index pastas={ pastas } />} />
         <Route path="/new" element={<New createPasta={ createPasta } {...props}/>} />
         <Route path="/protectedindex" element={<ProtectedIndex pastas={ pastas } {...props}/>} />
-        <Route  path="/show/:id" element={<Show pastas={ pastas } {...props}/>} />
-        <Route path = "/edit/:id" element = {<Edit pastas={ pastas } updatePasta={ updatePasta }/>} />
+        <Route path="/show/:id" element={<Show pastas={ pastas } {...props}/>} />
+        <Route path="/edit/:id" element = {<Edit pastas={ pastas } deletePasta={ deletePasta } updatePasta={ updatePasta } {...props}/>} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
