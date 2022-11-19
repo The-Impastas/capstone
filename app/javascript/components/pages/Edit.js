@@ -18,7 +18,6 @@ import { useNavigate, useParams, NavLink } from "react-router-dom";
     user_id: current_user.id
   })
   const handleChange = (e) => {
-    console.log("e.target.", e.target)
     setEditPasta({ ...editPasta, [e.target.name]: e.target.value })
   }
   const handleSubmit = () => {
