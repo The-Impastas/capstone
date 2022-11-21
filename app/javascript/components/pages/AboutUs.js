@@ -49,13 +49,13 @@ const AboutUs = () => {
                 <br/>
               </Typography>
               <br/>
-              <IconButton color="primary" a href='https://github.com/nathaniel-ross'>
+              <IconButton color="primary" href='https://github.com/nathaniel-ross' target="_blank">
                 <GitHubIcon />
               </IconButton>
-              <IconButton color="primary" a href='https://www.linkedin.com/in/nathaniel-rossloyo/'>
+              <IconButton color="primary" href='https://www.linkedin.com/in/nathaniel-rossloyo/' target="_blank">
                 <LinkedInIcon />
               </IconButton>
-              <IconButton color="primary" a href='https://nathaniel-ross.github.io/'>
+              <IconButton color="primary" href='https://nathaniel-ross.github.io/' target="_blank">
                 <LanguageIcon />
               </IconButton>
             </CardContent>
@@ -83,14 +83,14 @@ const AboutUs = () => {
                 <br/>
               </Typography>
               <br/>
-              <IconButton color="primary" a href='https://github.com/cmacias56'>
+              <IconButton color="primary" href='https://github.com/cmacias56' target="_blank">
                 <GitHubIcon />
               </IconButton>
-              <IconButton color="primary" a href='https://www.linkedin.com/in/christianmacias91/'>
+              <IconButton color="primary" href='https://www.linkedin.com/in/christianmacias91/' target="_blank">
                 <LinkedInIcon />
               </IconButton>
               {/* button for portfolio */}
-              {/* <IconButton color="primary" a href='https://www.google.com'>
+              {/* <IconButton color="primary" href='https://www.google.com' target="_blank">
                 <LanguageIcon />
               </IconButton> */}
             </CardContent>
@@ -117,14 +117,14 @@ const AboutUs = () => {
                 <br/>
               </Typography>
               <br/>
-              <IconButton color="primary" a href='https://github.com/Heath-H'>
+              <IconButton color="primary" href='https://github.com/Heath-H' target="_blank">
                 <GitHubIcon />
               </IconButton>
-              <IconButton color="primary" a href='https://www.linkedin.com/in/heath-haupt-861735176/'>
+              <IconButton color="primary" href='https://www.linkedin.com/in/heath-haupt-861735176/' target="_blank">
                 <LinkedInIcon />
               </IconButton>
               {/* button for portfolio */}
-              {/* <IconButton color="primary" a href='https://www.google.com'>
+              {/* <IconButton color="primary" href='https://www.google.com' target="_blank">
                 <LanguageIcon />
               </IconButton> */}
             </CardContent>
@@ -151,14 +151,14 @@ const AboutUs = () => {
                 <br/>
               </Typography>
               <br/>
-              <IconButton color="primary" a href='https://github.com/TheRealRion'>
+              <IconButton color="primary" href='https://github.com/TheRealRion' target="_blank">
                 <GitHubIcon />
               </IconButton>
-              <IconButton color="primary" a href='https://www.linkedin.com/in/lyssammartin/'>
+              <IconButton color="primary" href='https://www.linkedin.com/in/lyssammartin/' target="_blank">
                 <LinkedInIcon />
               </IconButton>
               {/* button for portfolio */}
-              {/* <IconButton color="primary" a href='https://www.google.com'>
+              {/* <IconButton color="primary" href='https://www.google.com' target="_blank">
                 <LanguageIcon />
               </IconButton> */}
             </CardContent>
