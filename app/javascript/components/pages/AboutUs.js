@@ -49,13 +49,13 @@ const AboutUs = () => {
                 <br/>
               </Typography>
               <br/>
-              <IconButton color="primary" onClick={() => window.open('https://github.com/nathaniel-ross')}>
+              <IconButton color="primary" a href='https://github.com/nathaniel-ross'>
                 <GitHubIcon />
               </IconButton>
-              <IconButton color="primary" onClick={() => window.open('https://www.linkedin.com/in/nathaniel-rossloyo/')}>
+              <IconButton color="primary" a href='https://www.linkedin.com/in/nathaniel-rossloyo/'>
                 <LinkedInIcon />
               </IconButton>
-              <IconButton color="primary" onClick={() => window.open('https://nathaniel-ross.github.io/')}>
+              <IconButton color="primary" a href='https://nathaniel-ross.github.io/'>
                 <LanguageIcon />
               </IconButton>
             </CardContent>
@@ -83,14 +83,14 @@ const AboutUs = () => {
                 <br/>
               </Typography>
               <br/>
-              <IconButton color="primary" onClick={() => window.open('https://github.com/cmacias56')}>
+              <IconButton color="primary" a href='https://github.com/cmacias56'>
                 <GitHubIcon />
               </IconButton>
-              <IconButton color="primary" onClick={() => window.open('https://www.linkedin.com/in/christianmacias91/')}>
+              <IconButton color="primary" a href='https://www.linkedin.com/in/christianmacias91/'>
                 <LinkedInIcon />
               </IconButton>
               {/* button for portfolio */}
-              {/* <IconButton color="primary" onClick={() => window.open('https://www.google.com')}>
+              {/* <IconButton color="primary" a href='https://www.google.com'>
                 <LanguageIcon />
               </IconButton> */}
             </CardContent>
@@ -117,14 +117,14 @@ const AboutUs = () => {
                 <br/>
               </Typography>
               <br/>
-              <IconButton color="primary" onClick={() => window.open('https://github.com/Heath-H')}>
+              <IconButton color="primary" a href='https://github.com/Heath-H'>
                 <GitHubIcon />
               </IconButton>
-              <IconButton color="primary" onClick={() => window.open('https://www.linkedin.com/in/heath-haupt-861735176/')}>
+              <IconButton color="primary" a href='https://www.linkedin.com/in/heath-haupt-861735176/'>
                 <LinkedInIcon />
               </IconButton>
               {/* button for portfolio */}
-              {/* <IconButton color="primary" onClick={() => window.open('https://www.google.com')}>
+              {/* <IconButton color="primary" a href='https://www.google.com'>
                 <LanguageIcon />
               </IconButton> */}
             </CardContent>
@@ -151,14 +151,14 @@ const AboutUs = () => {
                 <br/>
               </Typography>
               <br/>
-              <IconButton color="primary" onClick={() => window.open('https://github.com/TheRealRion')}>
+              <IconButton color="primary" a href='https://github.com/TheRealRion'>
                 <GitHubIcon />
               </IconButton>
-              <IconButton color="primary" onClick={() => window.open('https://www.linkedin.com/in/lyssammartin/')}>
+              <IconButton color="primary" a href='https://www.linkedin.com/in/lyssammartin/'>
                 <LinkedInIcon />
               </IconButton>
               {/* button for portfolio */}
-              {/* <IconButton color="primary" onClick={() => window.open('https://www.google.com')}>
+              {/* <IconButton color="primary" a href='https://www.google.com'>
                 <LanguageIcon />
               </IconButton> */}
             </CardContent>
