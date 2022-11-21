@@ -5,13 +5,13 @@ import { BrowserRouter } from "react-router-dom"
 import '@testing-library/jest-dom/extend-expect'
 
 describe("<Edit  />", () => {
-    it("renders without crashing", () => {
-        render(
-            <BrowserRouter>
-                <Edit />
-            </BrowserRouter>
-        );
-    });
+    // it("renders without crashing", () => {
+    //     render(
+    //         <BrowserRouter>
+    //             <Edit />
+    //         </BrowserRouter>
+    //     );
+    // });
     it("renders a heading", () => {
         render(
             <BrowserRouter>
@@ -20,7 +20,7 @@ describe("<Edit  />", () => {
         );
         const element = (screen.getByRole('heading', { name: /Edit your pasta here../i }))
         screen.logTestingPlaygroundURL()
-        expect(element).toBeInTheDocument()
+        expect().toBeInTheDocument()
     })
 });
 //   it("renders a form input tite", () => {
