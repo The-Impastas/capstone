@@ -1,10 +1,10 @@
 import React from "react";
 import { styled } from '@mui/material/styles';
-import { Box, Button, Typography, Container, CardActions, CardMedia, Grid, Card, CardContent, Link } from '@mui/material'
+import { Box, IconButton, Button, Typography, Container, CardActions, CardMedia, Grid, Card, CardContent, Link } from '@mui/material'
 import { NavLink } from "react-router-dom";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import WebAssetIcon from '@mui/icons-material/WebAsset';
+import LanguageIcon from '@mui/icons-material/Language';
 
 const AboutUs = () => {
 
@@ -42,17 +42,23 @@ const AboutUs = () => {
               <Typography align="center" component="div" variant="h6">
                 Design Lead
               </Typography >
-              <Typography align="center" variant="p"
+              <Typography align="center" variant="body2"
                 component="div">
                 <br/>
                 Here's a sentence about me. Here's something I like. Here's something I wanna do.
                 <br/>
               </Typography>
               <br/>
-              <GitHubIcon><Link to="https://github.com/nathaniel-ross">Github</Link></GitHubIcon>
-                <LinkedInIcon><Link to=" https://nathaniel-ross.github.io/">Portfolio</Link></LinkedInIcon>
-                <WebAssetIcon><Link to=" https://www.linkedin.com/in/nathaniel-rossloyo/">LinkedIn</Link></WebAssetIcon>
-              </CardContent>
+              <IconButton color="primary" onClick={() => window.open('https://github.com/nathaniel-ross')}>
+                <GitHubIcon />
+              </IconButton>
+              <IconButton color="primary" onClick={() => window.open('https://www.linkedin.com/in/nathaniel-rossloyo/')}>
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton color="primary" onClick={() => window.open('https://nathaniel-ross.github.io/')}>
+                <LanguageIcon />
+              </IconButton>
+            </CardContent>
           </Card>
           {/* Christian's card */}
           <Card sx={{ m: 5, minWidth: 350, maxWidth: 350, alignItems: 'center' }}>
@@ -70,17 +76,24 @@ const AboutUs = () => {
                 Product Manager
               </Typography>
               
-              <Typography align="center" variant="p"
+              <Typography align="center" variant="body2"
                 component="div">
                 <br/>
                 Here's a sentence about me. Here's something I like. Here's something I wanna do.
                 <br/>
               </Typography>
               <br/>
-              <GitHubIcon><Link to="https://github.com/nathaniel-ross">Github</Link></GitHubIcon>
-                <LinkedInIcon><Link to=" https://nathaniel-ross.github.io/">Portfolio</Link></LinkedInIcon>
-                <WebAssetIcon><Link to=" https://www.linkedin.com/in/nathaniel-rossloyo/">LinkedIn</Link></WebAssetIcon>
-              </CardContent>
+              <IconButton color="primary" onClick={() => window.open('https://github.com/cmacias56')}>
+                <GitHubIcon />
+              </IconButton>
+              <IconButton color="primary" onClick={() => window.open('https://www.linkedin.com/in/christianmacias91/')}>
+                <LinkedInIcon />
+              </IconButton>
+              {/* button for portfolio */}
+              {/* <IconButton color="primary" onClick={() => window.open('https://www.google.com')}>
+                <LanguageIcon />
+              </IconButton> */}
+            </CardContent>
           </Card>
           {/* Heath's card */}
           <Card sx={{ m: 5, minWidth: 350, maxWidth: 350, alignItems: 'center' }}>
@@ -97,17 +110,24 @@ const AboutUs = () => {
               <Typography align="center" component="div" variant="h6">
                 Tech Lead
               </Typography>
-              <Typography align="center" variant="p"
+              <Typography align="center" variant="body2"
                 component="div">
                 <br/>
                 Here's a sentence about me. Here's something I like. Here's something I wanna do.
                 <br/>
               </Typography>
               <br/>
-              <GitHubIcon><Link to="https://github.com/nathaniel-ross">Github</Link></GitHubIcon>
-                <LinkedInIcon><Link to=" https://nathaniel-ross.github.io/">Portfolio</Link></LinkedInIcon>
-                <WebAssetIcon><Link to=" https://www.linkedin.com/in/nathaniel-rossloyo/">LinkedIn</Link></WebAssetIcon>
-              </CardContent>
+              <IconButton color="primary" onClick={() => window.open('https://github.com/Heath-H')}>
+                <GitHubIcon />
+              </IconButton>
+              <IconButton color="primary" onClick={() => window.open('https://www.linkedin.com/in/heath-haupt-861735176/')}>
+                <LinkedInIcon />
+              </IconButton>
+              {/* button for portfolio */}
+              {/* <IconButton color="primary" onClick={() => window.open('https://www.google.com')}>
+                <LanguageIcon />
+              </IconButton> */}
+            </CardContent>
           </Card>
           {/* Lyssa's card */}
           <Card sx={{ m: 5, minWidth: 350, maxWidth: 350, alignItems: 'center' }}>
@@ -124,17 +144,24 @@ const AboutUs = () => {
               <Typography align="center" component="div" variant="h6">
                 Project Manager
               </Typography>
-              <Typography align="center" variant="p"
+              <Typography align="center" variant="body2"
                 component="div">
                 <br/>
                 Here's a sentence about me. Here's something I like. Here's something I wanna do.
                 <br/>
               </Typography>
               <br/>
-              <GitHubIcon><Link to="https://github.com/nathaniel-ross">Github</Link></GitHubIcon>
-                <LinkedInIcon><Link to=" https://nathaniel-ross.github.io/">Portfolio</Link></LinkedInIcon>
-                <WebAssetIcon><Link to=" https://www.linkedin.com/in/nathaniel-rossloyo/">LinkedIn</Link></WebAssetIcon>
-              </CardContent>
+              <IconButton color="primary" onClick={() => window.open('https://github.com/TheRealRion')}>
+                <GitHubIcon />
+              </IconButton>
+              <IconButton color="primary" onClick={() => window.open('https://www.linkedin.com/in/lyssammartin/')}>
+                <LinkedInIcon />
+              </IconButton>
+              {/* button for portfolio */}
+              {/* <IconButton color="primary" onClick={() => window.open('https://www.google.com')}>
+                <LanguageIcon />
+              </IconButton> */}
+            </CardContent>
           </Card>
 
         </Grid>
