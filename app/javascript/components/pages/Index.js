@@ -39,28 +39,27 @@ const Index = ({pastas}) => {
     
   }
 
-
     return (
       <Container
       sx={{
         mt: 10,
       }}>
-        <Typography variant="h3" textAlign="center"
-        sx={{
-          mt: 10,
-          mb: 10,
-        }}>
+      <Typography variant="h3" textAlign="center"
+      sx={{
+        mt: 10,
+        mb: 10,
+      }}>
         All Our Pasta Pairings
       </Typography>
+      <Box>
             {pastas?.map((pasta, index) => {
                 return (
-                  <Grid container columnSpacing={2} sx={{
+                  <Grid container columnSpacing={3} sx={{
                     justifyContent: 'center',
                     alignItems: 'center'
                   }}
                   >
-                    
-                        <Card sx={{ m: 5, minWidth: 200, maxWidth: 300, alignItems: 'center' }}>
+                        <Card sx={{ m: 5, minWidth: 400, maxWidth: 400, alignItems: 'center' }}>
                           <CardMedia
                             component="img"
                             height="240"
@@ -97,6 +96,7 @@ const Index = ({pastas}) => {
                     </Grid>
                 )
             })}
+            </Box>
         </Container>
     )
 

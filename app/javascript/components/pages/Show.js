@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import {useParams, NavLink} from "react-router-dom"
 
 
@@ -14,10 +15,19 @@ const Show = ({pastas, logged_in}) => {
   let showPasta = pastas?.find((pasta) => pasta.id === +id)
     return (
     <main>
-      <Card sx={{ maxWidth: 345 }}>
+      <Grid container columnSpacing={1} sx={{
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+      <Card sx={{
+        maxWidth: 600,
+        justifyContent: 'center',
+        alignItems: 'center',
+        mt: 10,
+      }}>
         <CardMedia
           component="img"
-          height="140"
+          height="400"
           image= {showPasta.image}
           alt= {showPasta.name_of_pasta}
         />
@@ -36,10 +46,11 @@ const Show = ({pastas, logged_in}) => {
             Recipe: {showPasta.recipe_link}
           </Typography>
         </CardContent>
-        {logged_in && ( <NavLink to={`/edit/${showPasta.id}`}><button>Edit your perfect pasta</button></NavLink>)}
+        {logged_in && ( <NavLink to={`/edit/${showPasta.id}`} style={{ textDecoration: 'none' }}><Button>Edit your perfect pasta</Button></NavLink>)}
       </Card>
       <br />
       <br />
+      </Grid>
     </main>
 
     )
