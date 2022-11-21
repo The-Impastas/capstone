@@ -8,12 +8,10 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search'
 import InputBase from '@mui/material/InputBase'
 import { styled, alpha } from '@mui/material/styles';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
-import Link from "@mui/material/Link";
 
 const  Navigation = ({
   logged_in,
@@ -132,57 +130,33 @@ const  Navigation = ({
               }}
             >
               {/* //nav links to always show// */}
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography  textAlign="center">
-                    <Link className="link" href="/index">
-                      Pastas
-                    </Link>
-                  </Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography  textAlign="center">
-                    <Link className="link" href="/aboutus">
-                      About Us
-                    </Link>
-                  </Typography>
-                </MenuItem>
+              <Button className="link" href="/index">
+                Pastas
+              </Button>
+              <Button className="link" href="/aboutus">
+                About Us
+              </Button> 
               {/* //nav links to show logged in// */}
               {logged_in && (
-                <>
-                <MenuItem   onClick={handleCloseNavMenu}>
-                <Typography  textAlign="center">
-                  <Link className="link" href="/protectedIndex">
-                    My Pastas
-                  </Link>
-                  </Typography>
-                </MenuItem>
-                <MenuItem  onClick={handleCloseNavMenu}>
-                  <Typography  textAlign="center">
-                    <Link className="link" href={ sign_out_route }>
-                      Sign Out
-                    </Link>
-                  </Typography>
-                </MenuItem>
-                </>
+              <div>
+                <Button className="link" href="/protectedIndex">
+                  My Pastas
+                </Button>
+                <Button className="link" href={ sign_out_route }>
+                  Sign Out
+                </Button>
+              </div>
               )}
               {/* //nav links to show logged out// */}
               {!logged_in && (
-                <>
-                <MenuItem   onClick={handleCloseNavMenu}>
-                <Typography  textAlign="center">
-                  <Link className="link" href={ sign_in_route }>
-                    Sign In
-                  </Link>
-                  </Typography>
-              </MenuItem>
-                <MenuItem   onClick={handleCloseNavMenu}>
-                <Typography  textAlign="center">                  
-                  <Link className="link" href={ new_user_route }>
-                    Sign Up
-                  </Link>
-                </Typography>
-              </MenuItem>
-              </>
+              <div>
+                <Button className="link" href={ sign_in_route }>
+                  Sign In
+                </Button>           
+                <Button className="link" href={ new_user_route }>
+                  Sign Up
+                </Button>
+              </div>
               )}
             </Menu>
           </Box>
@@ -208,58 +182,34 @@ const  Navigation = ({
             PP
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          {/* //nav links to always show// */}
-          <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography  textAlign="center">
-                    <Link className="link" href="/index">
-                      Pastas
-                    </Link>
-                  </Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography  textAlign="center">
-                    <Link className="link" href="/aboutus">
-                      About Us
-                    </Link>
-                  </Typography>
-                </MenuItem>
+          {/* //nav links to always show// */}        
+            <Button className="link" href="/index">
+              Pastas
+            </Button>
+            <Button className="link" href="/aboutus">
+              About Us
+            </Button>            
               {/* //nav links to show logged in// */}
-              {logged_in && (
-                <>
-                <MenuItem   onClick={handleCloseNavMenu}>
-                <Typography  textAlign="center">
-                  <Link className="link" href="/protectedIndex">
-                    My Pastas
-                  </Link>
-                  </Typography>
-                </MenuItem>
-                <MenuItem  onClick={handleCloseNavMenu}>
-                  <Typography  textAlign="center">
-                    <Link className="link" href={ sign_out_route }>
-                      Sign Out
-                    </Link>
-                  </Typography>
-                </MenuItem>
-                </>
+            {logged_in && (
+              <div>
+                <Button className="link" href="/protectedIndex">
+                  My Pastas
+                </Button>
+                <Button className="link" href={ sign_out_route }>
+                  Sign Out
+                </Button>  
+              </div>
               )}
               {/* //nav links to show logged out// */}
-              {!logged_in && (
-                <>
-                <MenuItem   onClick={handleCloseNavMenu}>
-                <Typography  textAlign="center">
-                  <Link className="link" href={ sign_in_route }>
-                    Sign In
-                  </Link>
-                  </Typography>
-              </MenuItem>
-                <MenuItem   onClick={handleCloseNavMenu}>
-                <Typography  textAlign="center">                  
-                  <Link className="link" href={ new_user_route }>
-                    Sign Up
-                  </Link>
-                </Typography>
-              </MenuItem>
-              </>
+            {!logged_in && (
+              <div>
+                <Button className="link" href={ sign_in_route }>
+                  Sign In
+                </Button>     
+                <Button className="link" href={ new_user_route }>
+                  Sign Up
+                </Button>
+              </div>
               )}
           </Box>
               <Search>
