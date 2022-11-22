@@ -37,5 +37,8 @@
     "roots": [
       "app/javascript/components"
     ]
+  },
+  "engines": {
+    "node": "18.7.0"
   }
 }
