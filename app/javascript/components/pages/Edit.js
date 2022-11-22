@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { TextField, Button, Paper, Grid, Typography } from "@mui/material";
 import { useNavigate, useParams, NavLink } from "react-router-dom";
 
+
   const Edit = ({pastas, updatePasta, deletePasta, current_user}) => {
-    const {id} = useParams()
+    const { id } = useParams()
     let currentPasta = pastas?.find((pasta) => pasta.id === +id)
+
 
   const navigate = useNavigate()
   const [editPasta, setEditPasta] = useState({
