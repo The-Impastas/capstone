@@ -1,16 +1,14 @@
 import React from "react"
-import { render } from "@testing-library/react"
 import Header from "./Header"
-import { BrowserRouter } from "react-router-dom"
+import '@testing-library/jest-dom/extend-expect'
+import { render, screen } from '@testing-library/react'
 
 describe("<Header />", () => {
   it("renders without crashing", () => {
-    const div = document.createElement("div")
     render(
-      <BrowserRouter>
-        <Header />
-      </BrowserRouter>,
-      div
-    )
-  })
-})
+      <Header />
+    );
+    screen.logTestingPlaygroundURL()
+    expect(screen.getByText(/PASTA/)).toBeInTheDocument()
+  });
+});
