@@ -12,7 +12,7 @@ import { useState, useEffect } from 'react';
 import AboutUs from "./pages/AboutUs";
 import ProtectedIndex from "./pages/ProtectedIndex";
 import { createTheme, ThemeProvider } from "@mui/material";
-import "./App.css" 
+import "./App.scss" 
 
 
 
@@ -114,7 +114,7 @@ const App = (props) => {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>Ω
+    </BrowserRouter>
     <Footer />
   </ThemeProvider>
     );
