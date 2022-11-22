@@ -12,7 +12,7 @@ import { useState, useEffect } from 'react';
 import AboutUs from "./pages/AboutUs";
 import ProtectedIndex from "./pages/ProtectedIndex";
 import { createTheme, ThemeProvider } from "@mui/material";
-import "../../assets/stylesheets/app.scss"
+import "../../assets/stylesheets/application.scss"
 
 
 const App = (props) => {
