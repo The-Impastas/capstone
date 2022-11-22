@@ -141,10 +141,10 @@ const ImageMarked = styled('span')(({ theme }) => ({
           <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
             <CardContent>
               <Typography variant="h5" component="div">
-                This pasta fuckin rocks!
+                I love pasta pairings! All my pastas are now paired perfectly!
               </Typography>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                - Nate
+                - Sara H.
               </Typography>
             </CardContent>
           </Card>
@@ -153,10 +153,10 @@ const ImageMarked = styled('span')(({ theme }) => ({
           <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
             <CardContent>
               <Typography variant="h5" component="div">
-                This pasta also fuckin rocks!
+                Pasta Pairings helped me plan a delicious dinner
               </Typography>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                - Nate
+                - John C.
               </Typography>
             </CardContent>
           </Card>
@@ -165,10 +165,10 @@ const ImageMarked = styled('span')(({ theme }) => ({
           <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
             <CardContent>
               <Typography variant="h5" component="div">
-                This pasta fuckin rocks!
+                Pasta Pairings helped me plan a delicious dinner
               </Typography>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                - Nate
+                - Nate R.
               </Typography>
             </CardContent>
           </Card>
@@ -177,10 +177,10 @@ const ImageMarked = styled('span')(({ theme }) => ({
           <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
             <CardContent>
               <Typography variant="h5" component="div">
-                This pasta also fuckin rocks!
+                I love pasta pairings! All my pastas are now paired perfectly!
               </Typography>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                - Nate
+                - Nate R.
               </Typography>
             </CardContent>
           </Card>

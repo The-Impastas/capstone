@@ -32,7 +32,7 @@ const ProtectedIndex = ({ pastas, current_user}) => {
           }}
           >
             
-                <Card sx={{ m: 5, minWidth: 200, maxWidth: 300, alignItems: 'center' }}>
+                <Card sx={{ m: 5, minWidth: 300, maxWidth: 300, alignItems: 'center' }}>
                   <CardMedia
                     component="img"
                     height="240"

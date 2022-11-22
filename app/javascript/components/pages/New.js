@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Input, Button, InputLabel, Paper, Grid } from "@mui/material";
+import { TextField, Input, Button, InputLabel, Paper, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const New = ({ createPasta, current_user }) => {
@@ -30,15 +30,16 @@ const New = ({ createPasta, current_user }) => {
     >
     <Paper sx={{
       m: 5,
-      p: 2,
+      p: 3,
+      mt: 10,
       justifyContent: 'center',
       alignItems: 'center'}}>
-      <h1>Fill in the form to Create your pasta!</h1>
+      <Typography variant="h5">
+        Fill in the form to create your pasta!
+      </Typography>
       <br />
       <TextField 
-      sx={{
-      justifyContent: 'center',
-      alignItems: 'center'}}
+      sx={{width: 550}}
       required id="outlined-required" 
       label="Name of Pasta" 
       name="name_of_pasta" 
@@ -48,6 +49,7 @@ const New = ({ createPasta, current_user }) => {
       <br />
       <br />
       <TextField 
+      sx={{width: 550}}
       required id="outlined-required" 
       label="Name of Protein" 
       name="protein" 
@@ -57,6 +59,7 @@ const New = ({ createPasta, current_user }) => {
       <br />
       <br />
       <TextField 
+      sx={{width: 550}}
       required id="outlined-required" 
       label="Name of Sauce" 
       name="sauce" 
@@ -66,6 +69,7 @@ const New = ({ createPasta, current_user }) => {
       <br />
       <br />
       <TextField 
+      sx={{width: 550}}
       required id="outlined-required" 
       label="Name of Beverage" 
       name="beverage" 
@@ -75,6 +79,7 @@ const New = ({ createPasta, current_user }) => {
       <br />
       <br />
       <TextField 
+      sx={{width: 550}}
       required id="outlined-required" 
       label="Name of Cheese" 
       name="cheese" 
@@ -84,6 +89,7 @@ const New = ({ createPasta, current_user }) => {
       <br />
       <br />
       <TextField 
+      sx={{width: 550}}
       required id="outlined-required" 
       label="Link to Recipe" 
       name="recipe_link" 
@@ -93,6 +99,7 @@ const New = ({ createPasta, current_user }) => {
       <br />
       <br />
       <TextField 
+      sx={{width: 550}}
       required id="outlined-required" 
       label="Image Link" 
       name="image" 
