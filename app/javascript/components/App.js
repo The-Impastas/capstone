@@ -12,8 +12,7 @@ import { useState, useEffect } from 'react';
 import AboutUs from "./pages/AboutUs";
 import ProtectedIndex from "./pages/ProtectedIndex";
 import { createTheme, ThemeProvider } from "@mui/material";
-import "./App.scss" 
-
+import "../../assets/stylesheets/app.scss"
 
 
 const App = (props) => {
@@ -83,7 +82,7 @@ const App = (props) => {
         main: '#EE964B',
       },
       background: {
-        default: '#f2f2e7',
+        default: '#F9F9F1',
         paper: '#ECECDC',
         card: '#F95738',
       },
