@@ -68,7 +68,7 @@ const  Navigation = ({
         [theme.breakpoints.up('sm')]: {
           width: '12ch',
           '&:focus': {
-            width: '20ch',
+            width: '10ch',
           },
         },
       },
@@ -90,14 +90,14 @@ const  Navigation = ({
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'secondary',
+              fontFamily: 'Helvetica Neue',
+              fontWeight: 800,
+              fontSize: '1.5rem',
               textDecoration: 'none',
+              color: 'inherit'
             }}
           >
-            Pasta Pairings
+            Perfect Pasta Pairings
           </Typography>
 ​
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -179,23 +179,35 @@ const  Navigation = ({
               textDecoration: 'none',
             }}
           >
-            PP
+            PPP
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {/* //nav links to always show// */}        
-            <Button color ="info" className="link" href="/index">
+            <Button
+            size="large"
+            color ="info"
+            className="link" href="/index">
               Pastas
             </Button>
-            <Button color ="info" className="link" href="/aboutus">
+            <Button
+            size="large"
+            color ="info"
+            className="link" href="/aboutus">
               About Us
             </Button>            
               {/* //nav links to show logged in// */}
             {logged_in && (
               <div>
-                <Button color ="info" className="link" href="/protectedIndex">
+                <Button
+                size="large"
+                color ="info"
+                className="link" href="/protectedIndex">
                   My Pastas
                 </Button>
-                <Button color ="info" className="link" href={ sign_out_route }>
+                <Button
+                size="large"
+                color ="info"
+                className="link" href={ sign_out_route }>
                   Sign Out
                 </Button>  
               </div>
@@ -203,10 +215,16 @@ const  Navigation = ({
               {/* //nav links to show logged out// */}
             {!logged_in && (
               <div>
-                <Button color ="info" className="link" href={ sign_in_route }>
+                <Button
+                size="large"
+                color ="info"
+                className="link" href={ sign_in_route }>
                   Sign In
                 </Button>     
-                <Button color ="info" className="link" href={ new_user_route }>
+                <Button
+                size="large"
+                color ="info"
+                className="link" href={ new_user_route }>
                   Sign Up
                 </Button>
               </div>
