@@ -1,10 +1,14 @@
 import React from "react"
-import { render } from "@testing-library/react"
 import Footer from "./Footer"
+import '@testing-library/jest-dom/extend-expect'
+import { render, screen } from '@testing-library/react'
 
 describe("<Footer />", () => {
   it("renders without crashing", () => {
-    const div = document.createElement("div")
-    render(<Footer />, div)
-  })
-})
+    render(
+      <Footer />
+    );
+    screen.logTestingPlaygroundURL()
+    expect(screen.getByText(/Lovingly Created by The Impastas, LLC 2022 ©/)).toBeInTheDocument()
+  });
+});
