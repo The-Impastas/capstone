@@ -66,7 +66,10 @@ const Index = ({pastas}) => {
                           />
                           <CardContent>
                             <Typography align="center" variant="h5" component="div">
-                              <NavLink to={`/show/${pasta.id}`}>{pasta.name_of_pasta}</NavLink>
+                              <Button
+                              size="large"
+                              variant="outlined"
+                              component ={NavLink} to={`/show/${pasta.id}`}>{pasta.name_of_pasta}</Button>
                             </Typography>
                             <br/>
                             <Typography component="legend">Rate this Recipe</Typography>
