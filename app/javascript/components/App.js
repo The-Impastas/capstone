@@ -25,7 +25,7 @@ const App = (props) => {
   }, [])
 
   const readPastas = () => {
-    fetch("http://localhost:3000/pasta")
+    fetch("https://perfect-pasta-pairings.herokuapp.com//pasta")
       .then((response) => response.json())
       .then((payload) => {
         setPastas(payload)
@@ -34,7 +34,7 @@ const App = (props) => {
   }
 
   const createPasta = (newPasta) => {
-    fetch("http://localhost:3000/pasta", {
+    fetch("https://perfect-pasta-pairings.herokuapp.com//pasta", {
       body: JSON.stringify(newPasta),
       headers: {
         "Content-Type": "application/json"
@@ -47,7 +47,7 @@ const App = (props) => {
   }
 
   const updatePasta = (pasta, id) => {
-    fetch(`http://localhost:3000/pasta/${id}`, {
+    fetch(`https://perfect-pasta-pairings.herokuapp.com//pasta/${id}`, {
       body: JSON.stringify(pasta, id),
       headers: {
         "Content-Type": "application/json"
@@ -60,7 +60,7 @@ const App = (props) => {
   }
 
   const deletePasta = (pasta, id) => {
-    fetch(`http://localhost:3000/pasta/${id}`, {
+    fetch(`https://perfect-pasta-pairings.herokuapp.com//pasta/${id}`, {
       body: JSON.stringify(pasta, id),
       headers: {
         "Content-Type": "application/json"
