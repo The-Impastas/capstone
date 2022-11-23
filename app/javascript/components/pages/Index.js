@@ -51,15 +51,13 @@ const Index = ({pastas}) => {
       }}>
         All Our Pasta Pairings
       </Typography>
-      <Box>
+      <Grid container spacing={{ xs: 1, md: 5 }} columns={{ xs: 1, sm: 8, md: 12 }}>
+
             {pastas?.map((pasta, index) => {
                 return (
-                  <Grid container columnSpacing={3} sx={{
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }}
-                  >
-                        <Card sx={{ m: 5, minWidth: 400, maxWidth: 400, alignItems: 'center' }}>
+                    <Grid item xs={2} sm={4} md={4}>
+                      
+                        <Card sx={{ m: 5, minWidth: 350, maxWidth: 350, alignItems: 'center' }}>
                           <CardMedia
                             component="img"
                             height="240"
@@ -91,12 +89,16 @@ const Index = ({pastas}) => {
                             </Button>
                           </CardContent>
                         </Card>
+                        
                     <br />
                     <br />
                     </Grid>
+                    
+                    
                 )
             })}
-            </Box>
+          </Grid>
+            
         </Container>
     )
 
