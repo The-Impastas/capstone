@@ -45,7 +45,7 @@ const AboutUs = () => {
               <Typography align="center" variant="body2"
                 component="div">
                 <br/>
-                Here's a sentence about me. Here's something I like. Here's something I wanna do.
+                Hi, I'm Nate, a full-stack developer with an emphasis on accessible design. My goal is to make the internet a more user-friendly place, one website at a time.
                 <br/>
               </Typography>
               <br/>
@@ -79,7 +79,7 @@ const AboutUs = () => {
               <Typography align="center" variant="body2"
                 component="div">
                 <br/>
-                Here's a sentence about me. Here's something I like. Here's something I wanna do.
+                My name is Christian, I am a Full-stack Developer. I wish to take the knowledge that I have obtained and reach a whole new height in the coding world. Let us break and fix some applications.
                 <br/>
               </Typography>
               <br/>
@@ -113,7 +113,7 @@ const AboutUs = () => {
               <Typography align="center" variant="body2"
                 component="div">
                 <br/>
-                Here's a sentence about me. Here's something I like. Here's something I wanna do.
+                Hello, I'm Heath. I am a developer with a passion for the outdoors. I hope to one day help others contribute positively to wildlife conservation and sustainable living with the help of technology.
                 <br/>
               </Typography>
               <br/>
@@ -147,7 +147,7 @@ const AboutUs = () => {
               <Typography align="center" variant="body2"
                 component="div">
                 <br/>
-                Here's a sentence about me. Here's something I like. Here's something I wanna do.
+                After a stint in the Air Force, a marriage, two kids, and an MBA, I took the curve-ball of life and became a full stack web developer through the wonderful LEARN Academy coding bootcamp program. 
                 <br/>
               </Typography>
               <br/>
