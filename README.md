@@ -31,14 +31,8 @@ For our capstone project at LEARN Academy, we created a web application with ful
 ### Motivation
 Constantly hungry during class, this team banned together to create the absolutely perfect website on the very best Perfect Pasta Pairings! 
 
-### Requirements
-This section is optional if there isn't any special dependencies. Else a bulletlist will suffice, e.g.,
 
-Node.js
-React
-Others
-
-### Installation or Getting Started
+### Installation 
 - Check out our live link here: 
     - https://perfect-pasta-pairings.herokuapp.com/
 - Host it locally by: 
@@ -48,7 +42,6 @@ Others
     - $ rails s
     - open browser to localhost:3000
     - enjoy!
-
 
 
 ## License
