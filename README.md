@@ -1,24 +1,56 @@
-# README
+# Perfect Pasta Pairings
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For our capstone project at LEARN Academy, we created a web application with full CRUD functionality and deployment using Ruby on Rails & React. 
 
-Things you may want to cover:
+### Contributors Include:
+- Heath Haupt  
+    - Github: https://github.com/Heath-H
+    - LinkedIn: https://www.linkedin.com/in/heath-haupt-861735176/
+- Christian Macias 
+    - Github: https://github.com/cmacias56
+    - LinkedIn: https://www.linkedin.com/in/christianmacias91/
+- Alyssa Martin
+    - Github: https://github.com/TheRealRion
+    - LinkedIn: https://www.linkedin.com/in/lyssammartin/
+    - Portfolio:  https://therealrion.github.io/
+- Nate Ross
+    - Github: https://github.com/nathaniel-ross
+    - LinkedIn: https://www.linkedin.com/in/nathaniel-rossloyo/
+    - Portfolio: https://nathaniel-ross.github.io/
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+### Features
+- View list of all pastas in database
+- View list of pastas added by user
+- Sign up as a user
+- Sign in as a user
+- View About Us page on creators
+- View Home Page with reviews
 
-* Database creation
+### Motivation
+Constantly hungry during class, this team banned together to create the absolutely perfect website on the very best Perfect Pasta Pairings! 
 
-* Database initialization
+### Requirements
+This section is optional if there isn't any special dependencies. Else a bulletlist will suffice, e.g.,
 
-* How to run the test suite
+Node.js
+React
+Others
 
-* Services (job queues, cache servers, search engines, etc.)
+### Installation or Getting Started
+- Check out our live link here: 
+    - https://perfect-pasta-pairings.herokuapp.com/
+- Host it locally by: 
+    - git clone {code}
+    - $ yarn
+    - $ rails db:create 
+    - $ rails s
+    - open browser to localhost:3000
+    - enjoy!
 
-* Deployment instructions
 
-* ...
+
+## License
+Please don't steal our project, it's ours. Ktkx. 
+
