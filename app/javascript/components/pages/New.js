@@ -12,7 +12,7 @@ const New = ({ createPasta, current_user }) => {
     cheese: "",
     recipe_link: "",
     image: "",
-    // user_id: current_user.id
+    user_id: current_user.id
   })
   const handleChange = (e) => {
     setNewPasta({ ...newPasta, [e.target.name]: e.target.value })
