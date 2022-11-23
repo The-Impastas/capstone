@@ -47,15 +47,9 @@ const Index = ({pastas}) => {
       <Typography variant="h3" textAlign="center"
       sx={{
         mt: 10,
-        fontWeight: 800,
+        mb: 10,
       }}>
-        All Our Perfect Pasta Pairings
-      </Typography>
-      <Typography variant="h6" textAlign="center"
-      sx={{
-        mb: 5,
-      }}>
-        Browse through our carefully crafted pairings of pasta to find your perfect dinner 
+        All Our Pasta Pairings
       </Typography>
       <Grid container spacing={{ xs: 1, md: 5 }} columns={{ xs: 1, sm: 8, md: 12 }}>
 

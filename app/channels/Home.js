@@ -132,10 +132,12 @@ const ImageMarked = styled('span')(({ theme }) => ({
           Reviews
     </Typography>
       <Box>
-      
-        <Grid container spacing={{ xs: 1, md: 3 }} columns={{ xs: 1, sm: 3, md: 8 }}>
-        <Grid item xs={2} sm={4} md={4}>
-          <Card sx={{ mt: 2, mb: 2, minWidth: 500, maxWidth: 500, alignItems: 'center' }}>
+      <Grid container sx={{
+        justifyContent: 'center',
+        alignItems: 'center'
+        }}>
+        <Grid xs={4} md={5}>
+          <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
             <CardContent>
               <Typography variant="h5" component="div">
                 I love these pasta pairings! All my pastas are now paired perfectly, just as the name implies! It's wonderful!
@@ -145,11 +147,9 @@ const ImageMarked = styled('span')(({ theme }) => ({
               </Typography>
             </CardContent>
           </Card>
-          </Grid>
-        
-        
-        <Grid item xs={2} sm={4} md={4}>
-          <Card sx={{ mt: 2, mb: 2, minWidth: 500, maxWidth: 500, alignItems: 'center' }}>
+        </Grid>
+        <Grid xs={4} md={5}>
+          <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
             <CardContent>
               <Typography variant="h5" component="div">
                 Pasta Pairings helped me plan a delicious dinner
@@ -159,10 +159,9 @@ const ImageMarked = styled('span')(({ theme }) => ({
               </Typography>
             </CardContent>
           </Card>
-          </Grid>
-        
-          <Grid item xs={2} sm={4} md={4}>
-          <Card sx={{ mt: 2, mb: 2, minWidth: 500, maxWidth: 500, alignItems: 'center' }}>
+        </Grid>
+        <Grid xs={4} md={5}>
+          <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
             <CardContent>
               <Typography variant="h5" component="div">
               I tried making pasta a few times before and didn't like the results. I just can't cook. I mean, I could do it, but it was never very good. I love pasta and buy lots of it, so I was super excited when I heard about PPP! I tried making pasta again using these recipes it was really easy.
@@ -173,8 +172,8 @@ const ImageMarked = styled('span')(({ theme }) => ({
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
-          <Card sx={{ mt: 2, mb: 2, minWidth: 500, maxWidth: 500, alignItems: 'center' }}>
+        <Grid xs={4} md={5}>
+          <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
             <CardContent>
               <Typography variant="h5" component="div">
               My family has introduced me to PPP. I learned how to make the most perfect fettuccini dish, and was also able to share my great Uncle John’s secret pasta recipe. PPP has made it easy to share and create new recipes.
@@ -185,8 +184,8 @@ const ImageMarked = styled('span')(({ theme }) => ({
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
-          <Card sx={{ mt: 2, mb: 2, minWidth: 500, maxWidth: 500, alignItems: 'center' }}>
+        <Grid xs={4} md={5}>
+          <Card sx={{ mt: 5, mb: 5, minWidth: 450, maxWidth: 350, alignItems: 'center' }}>
             <CardContent>
               <Typography variant="h5" component="div">
               I use to cry myself to sleep because I had boxes and boxes and boxes of pasta and no ideas what to do with it! Then one day, I found PPP and realized I didn't just have to live surrounded by pasta, I COULD EAT IT!

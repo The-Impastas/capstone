@@ -93,7 +93,7 @@ const App = (props) => {
         hint: '#083D77',
       },
       info: {
-        main: '#083D77',
+        main: '#F9F9F1',
       }
     },
   });
