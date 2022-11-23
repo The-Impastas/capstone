@@ -93,7 +93,7 @@ const  Navigation = ({
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'secondary',
               textDecoration: 'none',
             }}
           >
@@ -183,19 +183,19 @@ const  Navigation = ({
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {/* //nav links to always show// */}        
-            <Button className="link" href="/index">
+            <Button color ="info" className="link" href="/index">
               Pastas
             </Button>
-            <Button className="link" href="/aboutus">
+            <Button color ="info" className="link" href="/aboutus">
               About Us
             </Button>            
               {/* //nav links to show logged in// */}
             {logged_in && (
               <div>
-                <Button className="link" href="/protectedIndex">
+                <Button color ="info" className="link" href="/protectedIndex">
                   My Pastas
                 </Button>
-                <Button className="link" href={ sign_out_route }>
+                <Button color ="info" className="link" href={ sign_out_route }>
                   Sign Out
                 </Button>  
               </div>
@@ -203,10 +203,10 @@ const  Navigation = ({
               {/* //nav links to show logged out// */}
             {!logged_in && (
               <div>
-                <Button className="link" href={ sign_in_route }>
+                <Button color ="info" className="link" href={ sign_in_route }>
                   Sign In
                 </Button>     
-                <Button className="link" href={ new_user_route }>
+                <Button color ="info" className="link" href={ new_user_route }>
                   Sign Up
                 </Button>
               </div>

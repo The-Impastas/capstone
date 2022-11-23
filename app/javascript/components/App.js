@@ -12,7 +12,8 @@ import { useState, useEffect } from 'react';
 import AboutUs from "./pages/AboutUs";
 import ProtectedIndex from "./pages/ProtectedIndex";
 import { createTheme, ThemeProvider } from "@mui/material";
-import "../../assets/stylesheets/application.scss"
+import CssBaseline from '@mui/material/CssBaseline';
+
 
 
 const App = (props) => {
@@ -82,9 +83,8 @@ const App = (props) => {
         main: '#EE964B',
       },
       background: {
-        default: '#F9F9F1',
         paper: '#ECECDC',
-        card: '#F95738',
+        default: '#F9F9F1',
       },
       text: {
         primary: '#083D77',
@@ -101,6 +101,7 @@ const App = (props) => {
 
     return (
       <ThemeProvider theme={theme}>
+        <CssBaseline />
     <Header {...props}/>
     <BrowserRouter>
       <Routes>
