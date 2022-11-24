@@ -128,6 +128,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
     sx={{
       mt: 10,
       mb: 10,
+      fontWeight: 800,
     }}>
           Reviews
     </Typography>
@@ -193,6 +194,18 @@ const ImageMarked = styled('span')(({ theme }) => ({
               </Typography>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                 - Sebastian L.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={2} sm={4} md={4}>
+          <Card sx={{ mt: 2, mb: 2, minWidth: 500, maxWidth: 500, alignItems: 'center' }}>
+            <CardContent>
+              <Typography variant="h5" component="div">
+              Time and time again, I have come back to this website. And I am always delighted to find more and more Perfect Pasta Pairings to enjoy. The Angel Hair and red Sauvignon Blanc is my most recent favorite,
+              </Typography>
+              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                - Frank R.
               </Typography>
             </CardContent>
           </Card>

@@ -17,9 +17,10 @@ const AboutUs = () => {
       <Typography variant="h3" textAlign="center"
         sx={{
           mt: 10,
-          mb: 10,
+          fontWeight: 800,
+          mb: 5,
         }}>
-        About Us
+        Meet the Team
       </Typography>
       <Box>
         <Grid container columnSpacing={1} sx={{
@@ -36,7 +37,7 @@ const AboutUs = () => {
               alt="Photo of Nate"
             />
             <CardContent>
-              <Typography align="center" variant="h4" component="div">
+              <Typography align="center" variant="h4" component="div" sx={{fontWeight: 700}}>
                 Nate Ross
               </Typography>
               <Typography align="center" component="div" variant="h6">
@@ -46,6 +47,7 @@ const AboutUs = () => {
                 component="div">
                 <br/>
                 Hi, I'm Nate, a full-stack developer with an emphasis on accessible design. My goal is to make the internet a more user-friendly place, one website at a time.
+                <br/>
                 <br/>
               </Typography>
               <br/>
@@ -69,7 +71,7 @@ const AboutUs = () => {
               alt="Photo of Christian"
             />
             <CardContent>
-            <Typography align="center" component="div" variant="h4">
+            <Typography align="center" component="div" variant="h4" sx={{fontWeight: 700}}>
                 Christian Macias
               </Typography>
               <Typography align="center" component="div" variant="h6">
@@ -104,7 +106,7 @@ const AboutUs = () => {
               alt="Photo of Heath and puppers"
             />
             <CardContent>
-            <Typography align="center" component="div" variant="h4">
+            <Typography align="center" component="div" variant="h4" sx={{fontWeight: 700}}>
                 Heath Haupt
               </Typography>
               <Typography align="center" component="div" variant="h6">
@@ -114,6 +116,7 @@ const AboutUs = () => {
                 component="div">
                 <br/>
                 Hello, I'm Heath. I am a developer with a passion for the outdoors. I hope to one day help others contribute positively to wildlife conservation and sustainable living with the help of technology.
+                <br/>
                 <br/>
               </Typography>
               <br/>
@@ -138,7 +141,7 @@ const AboutUs = () => {
               alt="Photo of Lyssa"
             />
             <CardContent>
-            <Typography align="center" component="div" variant="h4">
+            <Typography align="center" component="div" variant="h4" sx={{fontWeight: 700}}>
                 Alyssa Martin
               </Typography>
               <Typography align="center" component="div" variant="h6">
@@ -158,9 +161,9 @@ const AboutUs = () => {
                 <LinkedInIcon />
               </IconButton>
               {/* button for portfolio */}
-              {/* <IconButton color="primary" href='https://www.google.com' target="_blank">
+              <IconButton color="primary" href='https://therealrion.github.io/' target="_blank">
                 <LanguageIcon />
-              </IconButton> */}
+              </IconButton>
             </CardContent>
           </Card>
 
