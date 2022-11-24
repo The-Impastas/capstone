@@ -78,7 +78,7 @@ const Index = ({pastas}) => {
                               component ={NavLink} to={`/show/${pasta.id}`}>{pasta.name_of_pasta}</Button>
                             </Typography>
                             <br/>
-                            <Typography component="legend">Rate this Recipe</Typography>
+                            <Typography align="center" component="legend">Rate this Recipe
                             <br/>
                             <StyledRating
                             align="center"
@@ -96,6 +96,7 @@ const Index = ({pastas}) => {
                               align="center">
                               Submit Rating
                             </Button>
+                            </Typography>
                           </CardContent>
                         </Card>
                         

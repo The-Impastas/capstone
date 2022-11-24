@@ -20,6 +20,8 @@ const  Navigation = ({
   sign_out_route,
   new_user_route,
   })  => {
+
+  
   
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -74,6 +76,7 @@ const  Navigation = ({
       },
     }));
     // search bar stuff end //
+
 
   return (
     //desktop view start//

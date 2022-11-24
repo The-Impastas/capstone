@@ -15,6 +15,7 @@ const ProtectedIndex = ({ pastas, current_user}) => {
         sx={{
           mt: 10,
           mb: 10,
+          fontWeight: 800,
         }}>
         Your Pasta Pairings
       </Typography>
