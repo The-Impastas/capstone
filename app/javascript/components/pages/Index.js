@@ -1,15 +1,12 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { NavLink } from "react-router-dom"
-import Link from '@mui/material'
 import {Container, Grid} from '@mui/material'
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -47,7 +44,7 @@ const Index = ({pastas}) => {
       <Typography variant="h3" textAlign="center"
       sx={{
         mt: 10,
-        fontWeight: 800,
+        fontWeight: 700,
       }}>
         All Our Perfect Pasta Pairings
       </Typography>
@@ -83,7 +80,7 @@ const Index = ({pastas}) => {
                             <StyledRating
                             align="center"
                             name="customized-color"
-                            defaultValue={2}
+                            defaultValue={0}
                             getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                             precision={0.5}
                             icon={<FavoriteIcon fontSize="inherit" />}

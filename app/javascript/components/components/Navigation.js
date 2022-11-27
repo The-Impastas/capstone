@@ -93,8 +93,8 @@ const  Navigation = ({
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'Helvetica Neue',
-              fontWeight: 800,
+              fontFamily: 'Arial, Helvetica, sans-serif',
+              fontWeight: 700,
               fontSize: '1.5rem',
               textDecoration: 'none',
               color: 'inherit'

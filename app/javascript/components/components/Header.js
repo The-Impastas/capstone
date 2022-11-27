@@ -7,7 +7,6 @@ const Header = (props) => {
   return (
     <>
       <div className="header" >
-        <>PASTA</>
         <Navigation {...props} />
       </div>
       <br />
