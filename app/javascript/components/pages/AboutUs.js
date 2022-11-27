@@ -17,7 +17,7 @@ const AboutUs = () => {
       <Typography variant="h3" textAlign="center"
         sx={{
           mt: 10,
-          fontWeight: 800,
+          fontWeight: 700,
           mb: 5,
         }}>
         Meet the Team

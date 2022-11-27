@@ -128,7 +128,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
     sx={{
       mt: 10,
       mb: 10,
-      fontWeight: 800,
+      fontWeight: 700,
     }}>
           Reviews
     </Typography>

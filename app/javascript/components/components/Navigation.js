@@ -94,7 +94,7 @@ const  Navigation = ({
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Arial, Helvetica, sans-serif',
-              fontWeight: 800,
+              fontWeight: 700,
               fontSize: '1.5rem',
               textDecoration: 'none',
               color: 'inherit'

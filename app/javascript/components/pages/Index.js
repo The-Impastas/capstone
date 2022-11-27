@@ -44,7 +44,7 @@ const Index = ({pastas}) => {
       <Typography variant="h3" textAlign="center"
       sx={{
         mt: 10,
-        fontWeight: 800,
+        fontWeight: 700,
       }}>
         All Our Perfect Pasta Pairings
       </Typography>
