@@ -73,14 +73,15 @@ test:
 # the values provided in this file. Alternatively, you can specify a connection
 # URL environment variable explicitly:
 #
-#   production:
+  production:
 #     url: <%= ENV["MY_APP_DATABASE_URL"] %>
-#
+#production:
+  <<: *defaulturl: <%= ENV['postgres://impastas_user:NlomVq2KQSdiu6401AhKVUrFNHcV9rW7@dpg-cequp3qrrk00n41fr820-a/impastas'] %>
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: perfect_pasta_production
-  username: perfect_pasta
-  password: <%= ENV["PERFECT_PASTA_DATABASE_PASSWORD"] %>
+# production:
+#   <<: *default
+#   database: perfect_pasta_production
+#   username: perfect_pasta
+#   password: <%= ENV["PERFECT_PASTA_DATABASE_PASSWORD"] %>
